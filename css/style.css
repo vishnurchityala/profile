@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comfortaa&family=Prosto+One&family=Rubik+Pixels&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&family=Cedarville+Cursive&family=Comfortaa&family=Orbitron:wght@900&family=Prosto+One&family=Rubik+Pixels&family=Tilt+Prism&display=swap');
 
 .brand-name{
     font-family: 'Tilt Prism', cursive;
@@ -7,6 +7,13 @@
     font: weight 800px;;
 
 }
+.spacing{
+    margin-left:1%;
+    margin-top:10px;
+    width: 80%;
+    height:1%;
+}
+
 .nav-link{
     font-family: 'Comfortaa', cursive;
 }
@@ -19,6 +26,9 @@
 .aboutBox{
     margin: 0%;
     max-width: 1100px;
+}
+body{
+    background-color: #EEEEEE;
 }
 .aboutMessageHeading{
     margin: 20px;
@@ -33,4 +43,44 @@
 .aboutButton{
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
+}
+.aboutMessageBox{
+    height:100%;
+}
+.skillsHeader{
+    max-width:600px;
+}
+.skillsMessage{
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 25px;
+}
+.skillsTitle{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+}
+.bg-1{
+    background-color: #393E46;
+}
+.bg-2{
+    background-color: #929AAB;
+}
+.bg-3{
+    background-color: #EEEEEE;
+}
+.bg-4{
+    background-color: #F7F7F7;
+}
+.skillsContent{
+    min-height: 400px;
+}
+.skillsContentArea{
+    max-width: 100%;
+}
+.skillInfo{
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 18px;
+}
+.skill{
+    margin-top:10px;
+
 }
