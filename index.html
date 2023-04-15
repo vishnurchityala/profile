@@ -9,15 +9,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="Stylesheet" href="css/style.css">
     <link rel="icon" href="img/young-man.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<body>
+<body class="bg-light">
 
 
 <!-- navigation bar-->
 
     <nav class="navbar  shadow navbar-expand-lg bg-black navbar-dark sticky-top">
-        <div class="container">
-          <a class="navbar-brand brand-name text-white" href="#">Vishnu.</a>
+        <div class="container navbar-align ms-auto me-auto">
+          <a class="navbar-brand brand-name text-white" href="#">Vishnu.com</a>
           <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -30,10 +31,13 @@
                 <a class="nav-link text-white" href="#skills">Skills</a>
               </li>
               <li class="nav-item ms-4">
-                <a class="nav-link text-white" href="#">Hobbies</a>
+                <a class="nav-link text-white" href="#works">My works</a>
               </li>
               <li class="nav-item ms-4">
-                <a class="nav-link text-white" href="#">More</a>
+                <a class="nav-link text-white" href="#">Articles</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link text-white" href="#more">More</a>
               </li>
             </ul>
           </div>
@@ -41,24 +45,25 @@
     </nav>
 
 <!--about section-->
+<div class="container-fluid head-spacer">
+
+</div>
 <div class="container-xxl mt-4" id="about">
-    <div class="aboutBox bg-black row ms-auto me-auto shadow-lg">
-        <div class="col-md-5 mt-4 mb-4">
-            <img src="img/profilePic.jpeg" width="96%" alt="" style="margin-left: 2%;">
+    <div class="aboutBox  row ms-auto me-auto ">
+        <div class="col-md-5  mb-2">
+            <img src="img/profile.jpeg" width="92%" alt="" style="margin-left: 4%; margin-top: 4%; margin-bottom: 4%;">
         </div>
-        <div class="col-md-7 mt-4 mb-4 ">
-            <div class="container aboutMessageBox border border-4 border-light">
-                <p class="aboutMessageHeading text-white">Hi.</p>
-                <p class="aboutMessageContent text-white">
-                    Vishnu here, i am a student currently completed his Higher education.
-                    Vishnu here, i am a student currently completed his Higher education.
-                    Vishnu here, i am a student currently completed his Higher education.
-                    <div class="flex ms-1">
-                        <a class="btn btn-light ms-2 aboutButton" href="mailto:vishnurchityala@gmail.com">Contact</a>
-                    
-                        <a class="btn btn-outline-light ms-2 aboutButton">
-                       More
-                        </a>
+        <div class="col-md-7 mb-2">
+            <div class="container aboutMessageBox">
+                <p class="aboutMessageHeading text-dark">Vishnu Chityala.</p>
+                <p class="aboutMessageContent text-dark">
+                    Hello and welcome to my personal portfolio website! My name is Vishnu and I am a student and programmer. 
+                </p>
+                <p class="aboutMessageContent text-dark">
+                    As a student, I am constantly learning and exploring new areas of computer science, and I am always excited to apply my knowledge to real-world problems. In my free time, I enjoy taking on programming challenges and working on personal projects to further develop my skills.
+                    <div class="flex ms-1 mt-5">
+                        <a class="btn btn-outline-dark ms-2 mb-3 aboutButton" href="mailto:vishnurchityala@gmail.com">Contact me</a>
+                        <a class="text-reset ms-3 mb-3 aboutButton" href="#">more</a>
                     </div>
                 </p>
             </div>
@@ -66,7 +71,15 @@
         </div>
     </div>
 </div>
-<div class="container-xxl mt-5 " id="skills">
+
+<div class="container-fluid">
+    <hr class="hr-design ms-auto me-auto">
+
+</div>
+<!--Skills section-->
+
+<div class="container-xxl mt-5 p-3 " id="skills">
+    <!--
     <div class="p-2 ms-auto me-auto border border-5 border-dark rounded skillsHeader">
         <div class="container  border border-5 border-dark rounded">
             <div class="flex p-2">
@@ -75,95 +88,291 @@
                     </div>
                 <div>
                     <p class="skillsMessage">
-                        skills are the only aspect which makes difference in every engineer.
-                        skills are the only aspect which makes difference in every engineer.
+                        Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
                     </p>
                 </div>
             </div>
         </div>
     </div>
+    -->
+    <div class="container-fluid p-3">
+        <div class="ms-auto me-auto buttonArrow">
+            <img src="img/skillsLogo.png" width="80px" alt="">
+        </div>
+    </div>
+    <div class="text-center">
+        <h1 class="Title">My Skills</h1>
+    </div>
+    <div class="container-fluid">
+    <div class="skillsContentArea ms-auto me-auto">
+        <div class="row">
+            <div class="col-lg-3 p-1">
+                <div class="p-2 ms-auto bg-light me-auto border border-5 border-black">
+                    <div class="container  border border-5 border-dark">
+                        <div class="flex p-2">
+                            <div class="p-4 ps-1">
+                                <img src="img/python.png" width="60px" height="60px"alt="">
+                            </div>
+                            <div>
+                                <p class="skillInfoTitle">Programming</p>
+                                <p class="skillInfo">
+                                    Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+                                </p>
+                            </div>
+                            <a href="#skills" class="btn btn-dark bg-1 skillInfo mb-1">See work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 p-1 shadow">
+                <div class="p-2 ms-auto bg-light me-auto border border-5 border-black ">
+                    <div class="container  border border-5 border-dark">
+                        <div class="flex p-2">
+                            <div class="p-4 ps-1">
+                                <img src="img/daily-tasks.png" width="60px" height="60px"alt="">
+                            </div>
+                            <div>
+                                <p class="skillInfoTitle">Content writting</p>
+                                <p class="skillInfo">
+                                    Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+                                </p>
+                            </div>
+                            <a href="#skills" class="btn btn-dark bg-1 skillInfo mb-1">See work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 p-1 shadow">
+                <div class="p-2 ms-auto bg-light me-auto border border-5 border-black ">
+                    <div class="container  border border-5 border-dark">
+                        <div class="flex p-2">
+                            <div class="p-4 ps-1">
+                                <img src="img/design.png" width="60px" height="60px"alt="">
+                            </div>
+                            <div>
+                                <p class="skillInfoTitle">Art and Designing</p>
+                                <p class="skillInfo">
+                                    Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+                                </p>
+                            </div>
+                            <a href="#skills" class="btn btn-dark bg-1 skillInfo mb-1">See work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 p-1 shadow">
+                <div class="p-2 ms-auto bg-light me-auto border border-5 border-black ">
+                    <div class="container  border border-5 border-dark">
+                        <div class="flex p-2">
+                            <div class="p-4 ps-1">
+                                <img src="img/skills (2).png" width="60px" height="60px"alt="">
+                            </div>
+                            <div>
+                                <p class="skillInfoTitle">Learning new things</p>
+                                <p class="skillInfo">
+                                    Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+                                </p>
+                            </div>
+                            <a href="#skills" class="btn btn-dark bg-1 skillInfo mb-1">know??</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--
     <div class="container p-2 border border-5 border-black mt-5">
         <div class="container-lg bg-black border border-4 border-black p-4">
-            <div class="skillsContentArea">
-                
-                <div class="row">
-                    <div class="col-md-3 p-1">
-                        <div class="p-2 ms-auto bg-light me-auto border border-5 border-black  ">
-                            <div class="container  border border-5 border-dark">
-                                <div class="flex p-2">
-                                    <div class="p-4 ps-1">
-                                        <img src="img/pythonImg.png" width="60px" height="60px"alt="">
-                                    </div>
-                                    <div>
-                                        <p class="skillInfo">
-                                            skills are the only aspect which makes difference in every engineer.
-                                            skills are the only aspect which makes difference in every engineer.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 p-1">
-                        <div class="p-2 ms-auto bg-light me-auto border border-5 border-black ">
-                            <div class="container  border border-5 border-dark">
-                                <div class="flex p-2">
-                                    <div class="p-4 ps-1">
-                                        <img src="img/contentCreationLogo.png" width="60px" height="60px"alt="">
-                                    </div>
-                                    <div>
-                                        <p class="skillInfo">
-                                            skills are the only aspect which makes difference in every engineer.
-                                            skills are the only aspect which makes difference in every engineer.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 p-1">
-                        <div class="p-2 ms-auto bg-light me-auto border border-5 border-black ">
-                            <div class="container  border border-5 border-dark">
-                                <div class="flex p-2">
-                                    <div class="p-4 ps-1">
-                                        <img src="img/arduinoLogo.png" width="60px" height="60px"alt="">
-                                    </div>
-                                    <div>
-                                        <p class="skillInfo">
-                                            skills are the only aspect which makes difference in every engineer.
-                                            skills are the only aspect which makes difference in every engineer.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 p-1">
-                        <div class="p-2 ms-auto bg-light me-auto border border-5 border-black ">
-                            <div class="container  border border-5 border-dark">
-                                <div class="flex p-2">
-                                    <div class="p-4 ps-1">
-                                        <img src="img/htmCssLogo.png" width="60px" height="60px"alt="">
-                                    </div>
-                                    <div>
-                                        <p class="skillInfo">
-                                            skills are the only aspect which makes difference in every engineer.
-                                            skills are the only aspect which makes difference in every engineer.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                
 
-    
         </div>
+    </div>
+    -->
+</div>
+
+<!-- My Works section -->
+
+<!--span-->
+<div class="container-fluid" id="works">
+    <hr class="hr-design ms-auto me-auto">
+</div>
+
+<div class="container-xxl mt-5">
+    <div class="container-fluid p-3">
+        <div class="ms-auto me-auto buttonArrow">
+            <img src="img/skillsLogo.png" width="80px" alt="">
+        </div>
+    </div>
+    <div class="text-center mb-1">
+        <h1 class="Title">My Works</h1>
+    </div>
+</div>
+<div class="container-xxl mt-5">
+    <div class="flex">
+        <div class="row p-1 worksContainer ms-auto me-auto mt-4">
+            <div class="col-md-4">
+                <img src="img/spyCarImg.avif"  width="100%" alt="">
+            </div>
+            <div class="col-md-8 p-1">
+                <div class="ms-4">
+                    <p class="workTitle text-black">
+                        Spy Car
+                    </p>
+                </div>
+                <div class="ms-4">
+                    <p class="workExplanation text-black">
+                        Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+                    </p>
+                    <div>
+                        <a href="#" class="btn btn-outline-dark">See Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-1 worksContainer ms-auto me-auto mt-4">
+            <div class="col-md-4">
+                <img src="img/radarImg.jpeg"  width="100%" alt="">
+            </div>
+            <div class="col-md-8 p-1">
+                <div class="ms-4">
+                    <p class="workTitle text-black">
+                        Radar
+                    </p>
+                </div>
+                <div class="ms-4">
+                    <p class="workExplanation text-black">
+                        Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+                    </p>
+                    <div>
+                        <a href="#" class="btn btn-outline-dark">See Work</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row p-1 worksContainer ms-auto me-auto mt-4">
+            <div class="col-md-4">
+                <img src="img/bluetoothCarImg.jpeg"  width="100%" alt="">
+            </div>
+            <div class="col-md-8 p-1">
+                <div class="ms-4">
+                    <p class="workTitle text-black">
+                        Bluetooth Car
+                    </p>
+                </div>
+                <div class="ms-4">
+                    <p class="workExplanation text-black">
+                        Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+                    </p>
+                    <div>
+                        <a href="#" class="btn btn-outline-dark">See Work</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row p-1 worksContainer ms-auto me-auto mt-4">
+            <div class="col-md-4">
+                <img src="img/edithPythonAssistantImg.jpg"  width="100%" alt="">
+            </div>
+            <div class="col-md-8 p-1">
+                <div class="ms-4">
+                    <p class="workTitle text-black">
+                        EDITH (even dead i am the hero)
+                    </p>
+                </div>
+                <div class="ms-4">
+                    <p class="workExplanation text-black">
+                        Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+                    </p>
+                    <div>
+                        <a href="#" class="btn btn-outline-dark">See Work</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row p-1 worksContainer ms-auto me-auto mt-5">
+            <div class="col-12 text-center">
+                <a href="#" class="text-reset workMoreOption">See More Work</a>
+
+            </div>
+        </div>
+
     </div>
 </div>
 
+<!--More Section -->
+<div class="container-fluid" id="more">
+    <hr class="hr-design ms-auto me-auto">
+</div>
+
+<div class="container-xxl mt-5">
+    <!--
+    <div class="container-fluid p-3">
+        <div class="ms-auto me-auto buttonArrow">
+            <img src="img/skillsLogo.png" width="80px" alt="">
+        </div>
+    </div>
+    -->
+    <div class="text-center mb-1">
+        <h1 class="Title">More</h1>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="moreContainer ms-auto me-auto p-3">
+        <div class="container-fluid">
+            <p class="moreInfo"> 
+                Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+                Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+
+            </p>
+            <div class="text-center mt-4 mb-4 p-2">
+                <img src="img/profile.jpeg" width="100%"  class="col-md-4" alt="">
+            </div>
+
+            <p class="moreInfo"> 
+                Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+                Lorem ipsum dolor sit amet. Ab omnis incidunt sit quidem delectus eos distinctio deserunt et beatae consequatur hic repellendus quia. 33 voluptates magni ex illo facilis sit consequatur iure vel Quis officiis eum labore nisi sed assumenda sint ut excepturi culpa.
+            </p>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- Footer -->
+<div class="container-fluid" id="more">
+    <hr class="hr-design ms-auto me-auto">
+</div>
+<div class="text-center">
+    <h1 class="Title mt-5">end-of-page</h1>
+</div>
+<div class="container-fluid" id="more">
+    <hr class="hr-design ms-auto me-auto">
+</div>
+<div class="container-fluid footer shadow mt-5 p-3">
+    <div class="footerIcons ms-auto me-auto mt-5">
+        <div class="grid">
+            <button class="btn col-md-1 btn-light footerMessage"><i class="fa fa-facebook"></i></button>
+            <button class="btn col-md-1 btn-light ms-4 footerMessage"><i class="fa fa-twitter"></i></button>
+            <button class="btn col-md-1 btn-light ms-4 footerMessage"><i class="fa fa-instagram"></i></button>
+            <button class="btn col-md-1 btn-light ms-4 footerMessage"><i class="fa-regular fa-envelope"></i></button>
+        </div>
+    </div>
+    <div class="container-fluid text-center text-white mt-5">
+        <p class="footerMessage">
+            Made by Vishnu Ramu Chityala
+        </p>
+    </div>
+    <div class="container-fluid text-center text-white mt-4">
+        <p class="footerLastMessage">
+           Thank You !!
+        </p>
+    </div>
+</div>
 
 
 </body>
