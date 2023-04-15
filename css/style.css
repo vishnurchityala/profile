@@ -37,7 +37,7 @@ body{
 }
 .aboutMessageContent{
     margin: 15px;
-    font-family: 'Prosto One', cursive;
+    font-family: 'Comfortaa', cursive;
     font-size: 20px;
 }
 .aboutButton{
@@ -54,33 +54,106 @@ body{
     font-family: 'Advent Pro', sans-serif;
     font-size: 25px;
 }
-.skillsTitle{
+.Title{
     font-family: 'Orbitron', sans-serif;
-    font-size: 40px;
 }
 .bg-1{
-    background-color: #393E46;
+    background-color: #000000;
 }
 .bg-2{
-    background-color: #929AAB;
+    background-color: #3a3f4b;
 }
 .bg-3{
-    background-color: #EEEEEE;
+    background-color: #b7b7b7;
 }
 .bg-4{
     background-color: #F7F7F7;
 }
+.navbar-align{
+    max-width:1220px;
+}
 .skillsContent{
-    min-height: 400px;
+
 }
 .skillsContentArea{
-    max-width: 100%;
+    margin-top: 40px;
+    max-width:1200px;
 }
 .skillInfo{
+    font-family: 'Comfortaa', cursive;
+    font-size: 15px;
+}
+.skillInfoTitle{
     font-family: 'Advent Pro', sans-serif;
     font-size: 18px;
 }
 .skill{
     margin-top:10px;
 
+}
+.buttonArrow{
+    width:80px;
+}
+.bookShelf{
+    max-width: 800px;
+    max-height:800px;
+    overflow-y: scroll;    
+}
+.hr-design{
+    display: block;
+    border-style: none;
+    border-top-style: dotted;
+    border-top-color: #000000;
+    width: 5%;
+    border-width: 6px;
+    margin-top: 80px;
+
+}
+.head-spacer{
+    min-height: 30px;
+}
+.worksContainer{
+    max-width:1200px;
+}
+
+.workTitle{
+    font-family: 'Comfortaa', cursive;
+    font-size: 40px;
+}
+.workExplanation{
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+}
+.workMoreOption{
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+}
+a:hover{
+    text-decoration-color: #c2c3c3;
+}
+.moreContainer{
+    margin-top: 40px;
+    text-align:justify;
+    max-width: 900px;
+}
+.moreInfo{
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+}
+.footer{
+    background-color: #000000;
+    min-height: 300px;
+}
+.footerIcons{
+    margin-top:100px;
+    max-width:500px;
+    text-align: center;
+}
+.footerMessage{
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+}
+.footerLastMessage{
+    font-family: 'Comfortaa', cursive;
+    font-size: 15px;
 }
