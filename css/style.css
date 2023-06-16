@@ -162,7 +162,7 @@ body{
 }
 .skillsContentArea{
     margin-top: 40px;
-    max-width:1200px;
+    max-width:1400px;
 }
 .skillInfo{
     font-family: 'Comfortaa', cursive;
@@ -198,6 +198,7 @@ body{
     min-height: 30px;
 }
 .worksContainer{
+    margin-bottom: 20px;
     max-width:1200px;
 }
 
@@ -218,7 +219,7 @@ a:hover{
 }
 .moreContainer{
     margin-top: 40px;
-    text-align:left;
+    text-align:justify;
     max-width: 900px;
 }
 .moreInfo{
@@ -228,6 +229,7 @@ a:hover{
 .footer{
     background-color: #000000;
     min-height: 300px;
+    margin-top: 30px;
 }
 .footerIcons{
     margin-top:100px;
@@ -263,7 +265,10 @@ a:hover{
  }
 
  @media only screen and (max-width: 700px)  {
-
+    .workExplanation{
+        font-family: 'Comfortaa', cursive;
+        font-size: 14px;
+    }
     .article-navigator{
         height: 0px;
         overflow-y: hidden;
