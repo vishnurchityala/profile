@@ -1,276 +1,151 @@
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&family=Cedarville+Cursive&family=Comfortaa&family=Orbitron:wght@900&family=Prosto+One&family=Rubik+Pixels&family=Tilt+Prism&display=swap');
-
-
-.navbar-toggler {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    transition: .5s ease-in-out;
-    margin-right: 7px;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Pacifico&display=swap');
+.body
+{
+    margin: 0px;
 }
-
-.navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-    border: 0;
+.pages
+{
+    background-color: rgb(255, 251, 246);
 }
-
-.navbar-toggler span {
-    margin: 0;
-    padding: 0;
-}
-
-.toggler-icon {
-    display: block;
-    position: absolute;
-    height: 3px;
+.frontPage
+{
+    background-image: url("../img/frontCover3.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 800px;
     width: 100%;
-    background: white;
-    border-radius: 0px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .45s ease-in-out;
 }
-
-.middle-bar {
-    margin-top: 0px;
+.frontPageAbout
+{
+    width: 60%;
+    height: 500px;
+    margin-top: 8%;
 }
-
-/* when navigation is clicked */
-
-.navbar-toggler .top-bar {
-    margin-top: 0px;
-    transform: rotate(135deg);
+.navbarBrand
+{
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+    text-decoration: underline;
+    color: black;
 }
-
-.navbar-toggler .middle-bar {
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-
-.navbar-toggler .bottom-bar {
-    margin-top: 0px;
-    transform: rotate(-135deg);
-}
-
-/* State when the navbar is collapsed */
-
-.navbar-toggler.collapsed .top-bar {
-    margin-top: -20px;
-    transform: rotate(0deg);
-}
-
-.navbar-toggler.collapsed .middle-bar {
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
-
-.navbar-toggler.collapsed .bottom-bar {
-    margin-top: 20px;
-    transform: rotate(0deg);
-}
-
-/* Color of 3 lines */
-
-.navbar-toggler.collapsed .toggler-icon {
-    background: white;
-}
-
-
-
-.brand-name{
-    font-family: 'Tilt Prism', cursive;
-    margin: 0;
-    font-size: 25px;
-    font: weight 800px;;
-
-}
-.spacing{
-    margin-left:1%;
-    margin-top:10px;
-    width: 80%;
-    height:1%;
-}
-
-.nav-link{
-    font-family: 'Comfortaa', cursive;
-}
-.bg-navbar{
-    background-color: #0e0e0e;
-}
-.bg-about{
-    background-color: #0e0e0e;
-}
-.aboutBox{
-    margin: 0%;
-    max-width: 1100px;
-}
-body{
-    background-color: #EEEEEE;
-}
-.aboutMessageHeading{
-    margin: 20px;
-    font-family: 'Prosto One', cursive;
-    font-size: 45px;
-}
-.aboutMessageContent{
-    margin: 15px;
-    font-family: 'Comfortaa', cursive;
+.navLink
+{
     font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    color: black;
 }
-.aboutButton{
-    font-family: 'Comfortaa', cursive;
-    font-size: 20px;
+.navLink:hover
+{
+    text-decoration: underline;
+    
 }
-.aboutMessageBox{
-    height:100%;
+.frontPageAboutHead
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 80px;
 }
-.skillsHeader{
-    max-width:600px;
+.frontPageAboutText
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 36px;
 }
-.skillsMessage{
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 25px;
+.m-section
+{
+    width:80%;
 }
-.skillContainer{
-    height:100%;
-}
-.Title{
-    font-family: 'Orbitron', sans-serif;
-}
-.bg-1{
-    background-color: #000000;
-}
-.bg-2{
-    background-color: #3a3f4b;
-}
-.bg-3{
-    background-color: #b7b7b7;
-}
-.bg-4{
-    background-color: #F7F7F7;
-}
-.navbar-align{
-    max-width:1220px;
-}
-.skillsContent{
-
-}
-.skillsContentArea{
-    margin-top: 40px;
-    max-width:1400px;
-}
-.skillInfo{
-    font-family: 'Comfortaa', cursive;
-    font-size: 15px;
-}
-.skillInfoTitle{
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 18px;
-}
-.skill{
-    margin-top:10px;
-
-}
-.buttonArrow{
-    width:80px;
-}
-.bookShelf{
-    max-width: 800px;
-    max-height:800px;
-    overflow-y: scroll;    
-}
-.hr-design{
-    display: block;
-    border-style: none;
-    border-top-style: dotted;
-    border-top-color: #000000;
-    width: 5%;
-    border-width: 6px;
-    margin-top: 80px;
-
-}
-.head-spacer{
-    min-height: 30px;
-}
-.worksContainer{
-    margin-bottom: 20px;
-    max-width:1200px;
-}
-
-.workTitle{
-    font-family: 'Comfortaa', cursive;
-    font-size: 30px;
-}
-.workExplanation{
-    font-family: 'Comfortaa', cursive;
-    font-size: 17px;
-}
-.workMoreOption{
-    font-family: 'Comfortaa', cursive;
-    font-size: 25px;
-}
-a:hover{
-    text-decoration-color: #c2c3c3;
-}
-.moreContainer{
-    margin-top: 40px;
-    text-align:justify;
-    max-width: 900px;
-}
-.moreInfo{
-    font-family: 'Comfortaa', cursive;
-    font-size: 20px;
-}
-.footer{
-    background-color: #000000;
-    min-height: 300px;
-    margin-top: 30px;
-}
-.footerIcons{
-    margin-top:100px;
+.section-heading
+{
+    width: 40%;
     text-align: center;
+    font-size: 55px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom:80px;
+    text-decoration: underline;
 }
-.footerMessage{
-    font-family: 'Comfortaa', cursive;
+.worksContainer
+{
+    padding:10px;
+    margin-bottom: 30px;
+}
+.workTitle
+{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.workExplanation
+{
     font-size: 20px;
+    font-weight: 200;
+    font-family: 'Josefin Sans', sans-serif; 
 }
-.footerLastMessage{
-    font-family: 'Comfortaa', cursive;
-    font-size: 15px;
+.aboutContent
+{
+    width:70%;
+    margin-left: 15%;
+    font-size:28px;
+    font-weight: 300;
+    margin-top: 30px;
+    font-family: 'Josefin Sans', sans-serif;
 }
-.article{
-
+.aboutImage
+{
+    width:30%;
+    margin-left: 35%;
+    margin-top:50px;
 }
-.article-text{
-    font-family: 'Comfortaa', cursive;
+.footerIcons
+{
+    width:20%;
 }
-.nav-link-article {
-    color: #000000 !important;
-  }
-.nav-link-article.active {
-    color: #F7F7F7 !important;
-    background: #000000;
- }
-
- .article-navigator{
- }
- .articles-list{
-    max-width:1100px;
-
- }
-
- @media only screen and (max-width: 700px)  {
-    .workExplanation{
-        font-family: 'Comfortaa', cursive;
-        font-size: 12px;
+@media only screen and (max-width: 780px) 
+{
+    .frontPage
+    {
+        background-image: url("../img/frontCover1.jpeg");
+        background-position: center;
+        height: 900px;
+        width: 100%;
+    }  
+    .frontPageAbout
+    {
+        width: 100%;
+        height: 350px;
+        margin-top: 6%;
+        
+    } 
+    .frontPageAboutHead
+    {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 60px;
     }
-    .article-navigator{
-        height: 0px;
-        overflow-y: hidden;
+    .frontPageAboutText
+    {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 28px;
+        
     }
- }
+    .worksSection
+    {
+        width:100%;
+    }
+    .aboutContent
+    {
+        font-size:20px;
+    }
+    .aboutImage
+    {
+        width: 70%;
+        margin-left: 15%;
+    }
+    .section-heading
+    {
+        font-size:36px;
+    }
+    .footerIcons
+    {
+        width:60%;
+    }
+}
