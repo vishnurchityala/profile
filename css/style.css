@@ -35,21 +35,26 @@
     font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
     color: black;
+    transition: text-shadow 0.3s ease;
 }
 .navLink:hover
 {
     text-decoration: underline;
+    text-shadow: 0px 0px 15px rgba(98, 98, 98, 0.555);
     
 }
 .frontPageAboutHead
 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 80px;
+    color: rgb(36, 36, 36);
 }
 .frontPageAboutText
 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 36px;
+    text-shadow: 0px 10px 20px rgba(60, 55, 55, 0.416);    
+
 }
 .m-section
 {
