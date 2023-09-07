@@ -1,407 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vishnu Chityala</title>
-    </head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <link rel="Stylesheet" href="css/style.css">
-    <link rel="icon" href="img/young-man.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<body class="bg-light">
-
-<!-- navigation bar-->
-
-    <nav class="navbar  shadow navbar-expand-lg bg-black navbar-dark sticky-top">
-        <div class="container navbar-align ms-auto me-auto">
-          <a class="navbar-brand brand-name text-white" href="#">Vishnu.com</a>
-          <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="toggler-icon top-bar"></span>
-            <span class="toggler-icon middle-bar"></span>
-            <span class="toggler-icon bottom-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item ms-4">
-                <a class="nav-link text-white" href="#skills">Skills</a>
-              </li>
-              <li class="nav-item ms-4">
-                <a class="nav-link text-white" href="pages/works.html">My works</a>
-              </li>
-              <li class="nav-item ms-4">
-                <a class="nav-link text-white" href="#about">About me</a>
-              </li>
-              <li class="nav-item ms-4">
-                <a class="nav-link text-white" href="pages/articles.html">Articles</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-
-<!--about section-->
-
-<div class="container-fluid head-spacer">
-
-</div>
-<div class="container-xxl mt-4" id="">
-    <div class="aboutBox  row ms-auto me-auto ">
-        <div class="col-md-5  mb-2">
-            <img src="img/profile.jpeg" width="92%" alt="" style="margin-left: 4%; margin-top: 4%; margin-bottom: 4%;">
-        </div>
-        <div class="col-md-7 mb-2">
-            <div class="container aboutMessageBox">
-                <p class="aboutMessageHeading text-dark">Vishnu Chityala</p>
-                <p class="aboutMessageContent text-dark">
-                    Hello and welcome to my personal portfolio website! My name is Vishnu and I am a student and programmer. 
-                </p>
-                <p class="aboutMessageContent text-dark">
-                    As a student, I am constantly learning and exploring new areas of computer science, and I am always excited to apply my knowledge to real-world problems. In my free time, I enjoy taking on programming challenges and working on personal projects to further develop my skills.
-                    <div class="flex ms-1 mt-5">
-                        <a class="btn btn-outline-dark ms-2 mb-3 aboutButton" href="mailto:vishnurchityala@gmail.com">Contact me</a>
-                    </div>
-                </p>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid">
-    <hr class="hr-design ms-auto me-auto">
-
-</div>
-
-<!--Skills section-->
-
-<div class="container-xxl mt-5 p-3 " id="skills">
-
-    <div class="container-fluid p-3">
-        <div class="ms-auto me-auto buttonArrow">
-            <img src="img/skilLogo.png" width="80px" alt="">
-        </div>
-    </div>
-    <div class="text-center">
-        <h1 class="Title">My Skills</h1>
-    </div>
-    <div class="container-fluid">
-    <div class="skillsContentArea ms-auto me-auto">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-3 p-1">
-                <div class="p-2 ms-auto bg-light me-auto border border-5 border-black skillContainer">
-                    <div class="container  border border-5 border-dark skillContainer">
-                        <div class="flex p-2">
-                            <div class="p-4 ps-1">
-                                <img src="img/python.png" width="60px" height="60px"alt="">
-                            </div>
-                            <div>
-                                <p class="skillInfoTitle">Programming</p>
-                                <p class="skillInfo">
-                                    I have a strong foundation in programming with proficiency in various programming language Python. I possess knowledge in software development and design principles, algorithms, data structures, and problem-solving techniques. I am capable of working on both individual and team-based projects, and I am always eager to learn and improve my skills to deliver quality results.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/young-man.png">
+    <title>Vishnu Chityala</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="frontPage" class="frontPage">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-sm mt-3">
+                <a href="" class="navbarBrand">Vishnu..</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="navLink me-5" aria-current="page" href="#worksPage">Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navLink me-5" href="#aboutSection">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navLink me-5" aria-current="page" href="#m-footer">Contact</a>
+                    </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-3 p-1">
-                <div class="p-2 ms-auto bg-light me-auto border border-5 border-black skillContainer ">
-                    <div class="container  border border-5 border-dark skillContainer">
-                        <div class="flex p-2">
-                            <div class="p-4 ps-1">
-                                <img src="img/daily-tasks.png" width="60px" height="60px"alt="">
-                            </div>
-                            <div>
-                                <p class="skillInfoTitle">Content writting</p>
-                                <p class="skillInfo">
-                                    I have a strong foundation in programming with proficiency in various programming languages such as Python, Java, and C++. I possess knowledge in software development and design principles, algorithms, data structures, and problem-solving techniques. I am capable of working on both individual and team-based projects, and I am always eager to learn and improve my skills to deliver quality results.
+        </nav>
+        <div class="container-sm">
+            <div class="frontPageAbout">
+                <p class="frontPageAboutHead">Hi. <span style="font-size:55px;">👋👋</span></p>
+                <p class="frontPageAboutText"><span style="background-color: rgb(255, 255, 255);border-radius: 5px;">Welcome to my personal portfolio website! My name is Vishnu and I am a student and programmer.I enjoy taking on programming challenges🧑‍💻🧑‍💻.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="worksPage">
+        <div style="height:80px;"></div>
+        <div class="container-md m-section ms-auto me-auto">
+            <div class="section-heading ms-auto me-auto">
+                <p class="">Works🛠️</p>
+            </div>
+            <div class="container-fluid row">
+                <div class="flex">
+                    <div class="row p-1 worksContainer ms-auto me-auto col-11">
+                        <div class="col-md-4">
+                            <img src="img/picFind-LOGO.png"  width="100%" alt="">
+                        </div>
+                        <div class="col-md-8 p-1">
+                            <div class="ms-4">
+                                <p class="workTitle">
+                                    picFind
                                 </p>
                             </div>
-
+                            <div class="ms-4">
+                                <p class="workExplanation">
+                                    picFind scans photographs and divides them into albums of various people. The faces of all the sampled people will be recognized and grouped into different categories in the collection of photographs after being scanned and searched.
+                                </p>
+                                <div>
+                                    <a href="https://drive.google.com/file/d/1khZmiysm8dn4CyZ_3MK_P7sA50-diV7P/view?usp=drive_link" target="_blank" class="btn btn-outline-dark skillInfo">See Work</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-3 col-md-6 p-1">
-                <div class="p-2 ms-auto bg-light me-auto border border-5 border-black skillContainer">
-                    <div class="container  border border-5 border-dark skillContainer">
-                        <div class="flex p-2">
-                            <div class="p-4 ps-1">
-                                <img src="img/design.png" width="60px" height="60px"alt="">
-                            </div>
-                            <div>
-                                <p class="skillInfoTitle">Art and Designing</p>
-                                <p class="skillInfo">
-                                    I am a skilled artist and designer with expertise in various mediums such as digital and traditional art, graphic design, and illustration. I possess strong creative and conceptual skills, along with proficiency in various software such as Adobe Photoshop and Illustrator. I have an eye for detail, composition, and color theory, and I am capable of creating visually appealing designs that communicate the client's message effectively. I am always willing to learn and experiment with new techniques to produce unique and innovative designs.
+                    <div class="row p-1 worksContainer ms-auto me-auto col-11">
+                        <div class="col-md-4">
+                            <img src=" img/spyCarImg.jpeg"  width="100%" alt="">
+                        </div>
+                        <div class="col-md-8 p-1">
+                            <div class="ms-4">
+                                <p class="workTitle">
+                                    Spy Car
                                 </p>
                             </div>
-
+                            <div class="ms-4">
+                                <p class="workExplanation">
+                                    A smart car operated mobile app using bluetooth and carries a wifi camera which gives all footage near car through wifi. It is handy and very easy to use car due to use of mobile app to control it. 
+                                </p>
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=8Z6hDPG3GxI" target="_blank" class="btn btn-outline-dark skillInfo">See Work</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-3 col-md-6 p-1">
-                <div class="p-2 ms-auto bg-light me-auto border border-5 skillContainer border-black ">
-                    <div class="container  border border-5 border-dark skillContainer">
-                        <div class="flex p-2">
-                            <div class="p-4 ps-1">
-                                <img src="img/skills (2).png" width="60px" height="60px"alt="">
-                            </div>
-                            <div>
-                                <p class="skillInfoTitle">Learning new things</p>
-                                <p class="skillInfo">
-                                    I possess a natural curiosity and a passion for learning, which drives me to seek out new knowledge and acquire new skills. I have a proven track record of adapting to new situations and acquiring new skills quickly and efficiently. I possess excellent analytical and problem-solving skills, which allow me to learn and comprehend new concepts and ideas with ease. My ability to learn new things quickly is an asset that enables me to take on new challenges and excel in various areas of work.
+                    <div class="row p-1 worksContainer ms-auto me-auto col-11">
+                        <div class="col-md-4">
+                            <img src=" img/encryptionImg.png"  width="100%" alt="">
+                        </div>
+                        <div class="col-md-8 p-1">
+                            <div class="ms-4">
+                                <p class="workTitle">
+                                    Encryption Program
                                 </p>
+                            </div>
+                            <div class="ms-4">
+                                <p class="workExplanation  ">
+                                    A python script which ecrypts a text file by taking password from a user and decrypts it by asking password from the user. Wrong password match will not be able to decrypt the text file and while text while is ecrypted it is not in human readable form.
+                                </p>
+                                <div>
+                                    <a href="https://youtu.be/a2CK17nsWFs" target="_blank" class="btn btn-outline-dark skillInfo">See Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-1 worksContainer ms-auto me-auto col-11">
+                        <div class="col-md-4">
+                            <img src="img/edithPythonAssistantImg.jpg"  width="100%" alt="">
+                        </div>
+                        <div class="col-md-8 p-1">
+                            <div class="ms-4">
+                                <p class="workTitle">
+                                    EDITH (Voice assistant)
+                                </p>
+                            </div>
+                            <div class="ms-4">
+                                <p class="workExplanation">
+                                    A voice assistant which understands human language and follows the given command. It can search for information on internet and give answers to the questions asked using internet. It can set alarm play song and open various website you order. Assistant can be only accessed by owners face id. It uses CHATGPT for generating responses for questions.
+                                </p>
+                                <div>
+                                    <a href="" class="btn btn-outline-dark skillInfo">See Work</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-
-</div>
-
-<!-- My Works section -->
-
-<!--span-->
-
-<div class="container-fluid" id="works">
-    <hr class="hr-design ms-auto me-auto">
-</div>
-
-<div class="container-xxl mt-5">
-    <div class="container-fluid p-3">
-        <div class="ms-auto me-auto buttonArrow">
-            <img src="img/skillsLogo.png" width="80px" alt="">
-        </div>
-    </div>
-    <div class="text-center mb-1">
-        <h1 class="Title">My Works</h1>
-    </div>
-</div>
-<div class="container-xxl mt-5">
-    <div class="flex">
-        <div class="row p-1 worksContainer ms-auto me-auto mt-4">
-            <div class="col-md-4">
-                <img src="img/spyCarImg.jpeg"  width="100%" alt="">
+    </section>
+    <section id="aboutSection" class="pages">
+        <div style="height: 80px;"></div>
+        <div class="container-md m-section ms-auto me-auto">
+            <div class="section-heading ms-auto me-auto">
+                About👇
             </div>
-            <div class="col-md-8 p-1">
-                <div class="ms-4">
-                    <p class="workTitle text-black">
-                        Spy Car
-                    </p>
-                </div>
-                <div class="ms-4">
-                    <p class="workExplanation text-black">
-                        A smart car operated mobile app using bluetooth and carries a wifi camera which gives all footage near car through wifi. It is handy and very easy to use car due to use of mobile app to control it. 
-                    </p>
-                    <div>
-                        <a href="https://www.youtube.com/watch?v=8Z6hDPG3GxI" class="btn btn-outline-dark skillInfo">See Work</a>
-                    </div>
-                </div>
+            <div class="aboutContent">
+                Hello! My name is Vishnu Ramu Chityala, and I am excited to share a little about myself with you. I was born in Surat, Gujarat, to my parents, Ramu Chityala and Swapna Chityala. I am currently pursuing Bachelors in Bennett University.
+                My passion for technology and coding started at a young age. I have always enjoyed exploring new technology and figuring out how it works. My dad helped me a lot in understanding various things in technology. I have developed excellent programming skills and have expertise in languages such as <span style="background-color: rgb(255, 236, 236);"> Python, C, C++ and HTML/CSS </span>. I am always looking for new projects to work on and love to challenge myself to learn new things.
             </div>
-        </div>
-        <div class="row p-1 worksContainer ms-auto me-auto mt-4">
-            <div class="col-md-4">
-                <img src="img/spyCarImg.avif"  width="100%" alt="">
+            <div class="aboutImage">
+                <img src="img/aboutImage.jpg" alt="" style="max-width: 100%; border-radius: 50%;">
             </div>
-            <div class="col-md-8 p-1">
-                <div class="ms-4">
-                    <p class="workTitle text-black">
-                        Follow-Me Robot
-                    </p>
-                </div>
-                <div class="ms-4">
-                    <p class="workExplanation text-black">
-                        A smart robot which senses human motion and follows it using IR, Ultrasound sensors embeded to it. The robot carries it own power source.
-                    
-                    </p>
-                    <div>
-                        <a href="https://youtube.com/shorts/im1lc8FQVyM?feature=share" class="btn btn-outline-dark skillInfo">See Work</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row p-1 worksContainer ms-auto me-auto mt-4">
-            <div class="col-md-4">
-                <img src="img/radarImg.jpeg"  width="100%" alt="">
-            </div>
-            <div class="col-md-8 p-1">
-                <div class="ms-4">
-                    <p class="workTitle text-black">
-                        Radar
-                    </p>
-                </div>
-                <div class="ms-4">
-                    <p class="workExplanation text-black">
-                        A small functioning radar system which uses ultrasound sensor to sense its surroundings and show its result which shows the prsence of objects and disturbances near by.
-                    </p>
-                    <div>
-                        <a href="https://www.youtube.com/watch?v=rQIPDKQyWzs" class="btn btn-outline-dark skillInfo">See Work</a>
-                    </div>
-                </div>
+            <div class="aboutContent">
+                In addition to my passion for programming, I also have a keen interest in <span style="background-color: rgb(255, 236, 236);">business and content writing</span>. I enjoy reading about the latest developments in technology and business and keeping up with current events in these fields.
             </div>
 
         </div>
-        <div class="row p-1 worksContainer ms-auto me-auto mt-4">
-            <div class="col-md-4">
-                <img src="img/smartDustbinImg.jpeg"  width="100%" alt="">
-            </div>
-            <div class="col-md-8 p-1">
-                <div class="ms-4">
-                    <p class="workTitle text-black">
-                        Smart Dustbin
-                    </p>
-                </div>
-                <div class="ms-4">
-                    <p class="workExplanation text-black">
-                        A smart dustbin made using Arduino and ultrasound sensor, which detects the presence of person front of it and open and closes the cap automatically. 
-                    
-                    </p>
-                    <div>
-                        <a href="https://www.youtube.com/watch?v=UssMB2-DhgM" class="btn btn-outline-dark skillInfo">See Work</a>
-                    </div>
-                </div>
-            </div>
-
+        <div style="height:100px;"></div>
+    </section>
+    <section id="m-footer" style="background-color:#393E46;padding-top:60px;padding-bottom: 60px;">
+        <div class="container-fluid text-white" style="text-align: center;font-family: 'Josefin Sans', sans-serif;">
+            <p>Contact 👇</p>
         </div>
-        <div class="row p-1 worksContainer ms-auto me-auto mt-4">
-            <div class="col-md-4">
-                <img src="img/encryptionImg.png"  width="100%" alt="">
-            </div>
-            <div class="col-md-8 p-1">
-                <div class="ms-4">
-                    <p class="workTitle text-black">
-                        Encryption Program
-                    </p>
-                </div>
-                <div class="ms-4">
-                    <p class="workExplanation text-black">
-                        A python script which ecrypts a text file by taking password from a user and decrypts it by asking password from the user. Wrong password match will not be able to decrypt the text file and while text while is ecrypted it is not in human readable form.
-                    
-                    </p>
-                    <div>
-                        <a href="https://youtu.be/a2CK17nsWFs" class="btn btn-outline-dark skillInfo">See Work</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="row p-1 worksContainer ms-auto me-auto mt-4">
-            <div class="col-md-4">
-                <img src="img/edithPythonAssistantImg.jpg"  width="100%" alt="">
-            </div>
-            <div class="col-md-8 p-1">
-                <div class="ms-4">
-                    <p class="workTitle text-black">
-                        EDITH (Voice assistant)
-                    </p>
-                </div>
-                <div class="ms-4">
-                    <p class="workExplanation text-black">
-                        A voice assistant which understands human language and follows the given command. It can search for information on internet and give answers to the questions asked using internet. It can set alarm play song and open various website you order. Assistant can be only accessed by owners face id. It uses CHATGPT for generating responses for questions.
-                    </p>
-                    <div>
-                        <a href="#" class="btn btn-outline-dark skillInfo">See Work</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="row p-1 worksContainer ms-auto me-auto mt-5">
-            <div class="col-12 text-center">
-                <a href="pages/works.html" class="text-reset workMoreOption">See More Work</a>
+        <div class="footerIcons ms-auto me-auto">
+            <div class="row">
+                <a href="https://www.linkedin.com/in/vishnu-chityala-a20b83253/" target="_blank" class="col-2 ms-auto me-auto">
+                    <img src="img/linkedin.svg" style="height: 30px;" alt="">
+                </a>
+                <a href="https://www.instagram.com/vishnu12_7_05/" class="col-2 ms-auto me-auto" target="_blank">
+                    <img src="img/instagram.png" style="height: 30px;" alt="">
+                </a>
+                <a href="mailto:vishnurchityala@gmail.com" class="col-2 ms-auto me-auto">
+                    <img src="img/gmail.png" style="height: 30px;" alt="">
+                </a>
+                <a href="https://github.com/vishnurchityala" class="col-2 ms-auto me-auto" target="_blank">
+                    <img src="img/github.png" style="height: 30px;" alt="">
+                </a>
 
             </div>
         </div>
-
-    </div>
-</div>
-
-<!--About Section -->
-
-<div class="container-fluid" id="about">
-    <hr class="hr-design ms-auto me-auto">
-</div>
-
-<div class="container-xxl mt-5">
-    <div class="ms-auto me-auto buttonArrow">
-        <img src="img/aboutLogo.png" width="80px" alt="">
-    </div>
-    <div class="text-center mb-1 mt-2">
-        <h1 class="Title">About me</h1>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="moreContainer ms-auto me-auto p-3">
-        <div class="container-fluid">
-            <p class="moreInfo"> 
-                Hello! My name is Vishnu Ramu Chityala, and I am excited to share a little about myself with you. I was born in Surat, Gujarat, to my parents, Ramu Chityala and Swapna Chityala. I am currently going pursue Bachelor of Technology in Computer Science and Engineering.
-            </p>
-            <p class="moreInfo">
-                My passion for technology and coding started at a young age. I have always enjoyed exploring new technology and figuring out how it works. My dad helped me a lot in understanding various things in technology. I have developed excellent programming skills and have expertise in languages such as Python,and HTML/CSS. I am always looking for new projects to work on and love to challenge myself to learn new things.
-                
-            </p>
-            <div class="text-center mt-4 mb-4 p-2">
-                <img src="img/profile.jpeg" width="100%"  class="col-md-4" alt="">
-            </div>
-
-            <p class="moreInfo"> 
-                In addition to my passion for programming, I also have a keen interest in business and content writing. I enjoy reading about the latest developments in technology and business and keeping up with current events in these fields. As a content writer, I have honed my skills in writing engaging and informative content that helps readers understand complex topics in a simplified manner.
-            </p >
-
-            <p class="moreInfo"> 
-                I have completed my higher secondary education with a focus on science and mathematics. During this time, I developed strong analytical and problem-solving skills that have been invaluable in my programming journey.
-            </p>
+        <div class="container-fluid text-white" style="text-align: center;font-family: 'Josefin Sans', sans-serif;margin-top: 65px; text-decoration: underline;">
+            <p>Made by : Vishnu Ramu Chityala with 🤍</p>
         </div>
-
-
-    </div>
-
-</div>
-
-
-
-<div class="container-fluid" id="end-of-page">
-    <hr class="hr-design ms-auto me-auto">
-</div>
-<div class="ms-auto me-auto buttonArrow mt-5">
-    <img src="img/namasteLogo.png" width="80px" alt="">
-</div>
-<div class="text-center">
-    <h1 class="Title mt-2">end-of-portfolio</h1>
-</div>
-<div class="container-fluid">
-    <hr class="hr-design ms-auto me-auto">
-</div>
-
-<!-- Footer -->
-
-<div class="container-fluid footer shadow mt-5 p-3">
-    <div class="footerIcons ms-auto me-auto mt-5">
-        <div class="grid">
-            <a href="https://twitter.com/ChityalaVishnu" class="text-reset col-md-1 ms-4"><button class="btn  btn-light footerMessage"><i class="fa fa-twitter"></i></button></a>
-            <a href="https://www.instagram.com/vishnu12_7_05/" class="text-reset col-md-1 ms-4"><button class="btn  btn-light footerMessage"><i class="fa fa-instagram"></i></button></a>
-        </div>
-    </div>
-    <div class="container-fluid text-center text-white mt-5">
-        <p class="footerMessage">
-            Made by Vishnu Ramu Chityala
-        </p>
-    </div>
-    <div class="container-fluid text-center text-white mt-4">
-        <p class="footerLastMessage">
-           Thank You !!
-        </p>
-    </div>
-</div>
-
-
+    </section>
 </body>
 </html>
