@@ -153,4 +153,13 @@
     {
         width:60%;
     }
+    .m-section
+    {
+        width: 100%;
+    }
+    .aboutContent
+    {
+        width: 85%;
+        margin-left: 7.5%;
+    }
 }
