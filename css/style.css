@@ -166,3 +166,24 @@ html{
         margin-left: 7.5%;
     }
 }
+
+.badge-tech {
+    font-size: 14px;
+    margin: 5px;
+    padding: 1rem 1.2rem;
+    border-radius: 15px;
+    color: white;
+  }
+
+.badge-java { background-color: #f89820; }        /* Java - Orange */
+.badge-python { background-color: #306998; }      /* Python - Blue */
+.badge-html { background-color: #e34c26; }        /* HTML - Red */
+.badge-css { background-color: #264de4; }         /* CSS - Blue */
+.badge-bootstrap { background-color: #563d7c; }   /* Bootstrap - Purple */
+.badge-django { background-color: #092e20; }      /* Django - Dark Green */
+.badge-scrapy { background-color: #77bb43; }      /* Scrapy - Light Green */
+.badge-pinecone { background-color: #4C85FF; }    /* Pinecone - Blue */
+.badge-arduino { background-color: #00979D; }     /* Arduino - Teal */ 
+.badge-flask { background-color: #000000; }       /* Flask - Black */
+.badge-spring { background-color: #6DB33F; }      /* Spring - Green */
+.badge-cpp { background-color: #00599C; }         /* C++ - Dark Blue */
