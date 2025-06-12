@@ -6,9 +6,19 @@ html{
 {
     margin: 0px;
 }
-.pages
+.skillsPage
 {
     background-color: rgb(255, 251, 246);
+}
+.skillsTitle
+{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.aboutPage
+{
+    background-color: rgb(255, 245, 233);
 }
 .frontPage
 {
