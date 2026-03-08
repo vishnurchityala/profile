@@ -121,6 +121,7 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         const POSTS_PER_PAGE = 5;
+        const BLOGS_MANIFEST_PATH = 'blogs/index.json';
 
         const listEl = document.getElementById('post-list');
         const paginationEl = document.getElementById('post-pagination');
@@ -160,7 +161,11 @@
             return withoutLeadingSlash;
         }
 
-        async function discoverPostFiles() {
+        function isLocalhost() {
+            return ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
+        }
+
+        async function discoverFromDirectoryListing() {
             const files = new Set();
 
             try {
@@ -178,6 +183,38 @@
             }
 
             return Array.from(files).sort((a, b) => a.localeCompare(b));
+        }
+
+        async function discoverFromManifest() {
+            try {
+                const res = await fetch(BLOGS_MANIFEST_PATH, { cache: 'no-cache' });
+                if (!res.ok) return [];
+                const data = await res.json();
+                const list = Array.isArray(data) ? data : data.files;
+                if (!Array.isArray(list)) return [];
+
+                const files = new Set();
+                list.forEach((file) => {
+                    if (typeof file !== 'string') return;
+                    const normalized = normalizePostFile(file);
+                    if (normalized) files.add(normalized);
+                });
+                return Array.from(files).sort((a, b) => a.localeCompare(b));
+            } catch (_) {
+                return [];
+            }
+        }
+
+        async function discoverPostFiles() {
+            if (isLocalhost()) {
+                const localFiles = await discoverFromDirectoryListing();
+                if (localFiles.length) return localFiles;
+            }
+
+            const manifestFiles = await discoverFromManifest();
+            if (manifestFiles.length) return manifestFiles;
+
+            return discoverFromDirectoryListing();
         }
 
         function enhanceCodeBlocks() {
