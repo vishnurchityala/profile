@@ -232,7 +232,7 @@ body {
   z-index: 1;
   width: 100%;
   text-align: left;
-  padding: 18px;
+  padding: 18px 62px 18px 18px;
   border: 3px solid var(--border-color);
   background: linear-gradient(180deg, #f8e6d9 0%, #efe4d8 100%);
   box-shadow: inset -4px -4px 0 rgba(42, 29, 25, 0.08), inset 4px 4px 0 rgba(255, 255, 255, 0.22);
@@ -250,6 +250,21 @@ body {
   font-family: var(--pixel-font-title);
   font-size: 15px;
   margin-bottom: 8px;
+}
+
+.row-view-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--border-color);
+  background: linear-gradient(180deg, #fffdf8 0%, #ffd8bd 100%);
+  box-shadow: inset -2px -2px 0 rgba(42, 29, 25, 0.12), inset 2px 2px 0 rgba(255, 255, 255, 0.24);
+  color: var(--ink);
+  font-size: 13px;
 }
 
 .row-meta {

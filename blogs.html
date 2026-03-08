@@ -205,6 +205,9 @@
                 row.className = 'post-row';
                 row.setAttribute('data-slug', post.slug);
                 row.innerHTML = `
+                    <span class="row-view-icon" aria-hidden="true">
+                        <i class="fa-regular fa-eye"></i>
+                    </span>
                     <div class=\"row-title\">${post.title || post.slug}</div>
                     <div class=\"row-meta\">
                         <span>${post.date || 'Unknown date'}</span>
