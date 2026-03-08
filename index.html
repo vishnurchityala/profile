@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Tech - Vishnu Chityala</title>
+    <title>About - Vishnu Chityala</title>
+    <link rel="icon" type="image/png" href="img/vc-pfp.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,6 +14,21 @@
     <div class="sky-layer"></div>
     <div class="page-orb orb-left"></div>
     <div class="page-orb orb-right"></div>
+    <div class="nav-shell">
+        <nav class="nav-bar">
+            <a class="nav-brand" href="index.html">
+                <span class="brand-mark">
+                    <img src="img/vc-pfp.png" alt="Vishnu Chityala">
+                </span>
+                <span>Vishnu Chityala</span>
+            </a>
+            <div class="nav-links">
+                <a class="nav-link active" href="index.html">About</a>
+                <a class="nav-link" href="blogs.html">Blogs</a>
+            </div>
+        </nav>
+    </div>
+    <div class="page-stack">
     <div class="container">
         <aside class="sidebar">
             <div class="window intro-window">
@@ -44,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="window">
+            <div class="window" id="about">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -71,7 +87,7 @@
                 </div>
             </div>
 
-            <div class="window">
+            <div class="window" id="projects">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -98,7 +114,7 @@
                 </div>
             </div>
 
-            <div class="window">
+            <div class="window" id="skills">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -266,7 +282,7 @@
             </div>
 
             <div class="content-grid">
-                <div class="window">
+                <div class="window" id="experience">
                     <div class="window-header">
                         <div class="window-controls">
                             <div class="control red"></div>
@@ -290,7 +306,7 @@
                     </div>
                 </div>
 
-                <div class="window">
+                <div class="window" id="education">
                     <div class="window-header">
                         <div class="window-controls">
                             <div class="control red"></div>
@@ -324,21 +340,57 @@
             </div>
         </main>
     </div>
-</body>
-<script>
-    document.querySelectorAll('.copy-btn').forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const text = btn.dataset.copy || '';
-            if (!text) return;
-            navigator.clipboard.writeText(text).then(() => {
-                const icon = btn.querySelector('i');
-                if (!icon) return;
-                const prev = icon.className;
-                icon.className = 'fa-solid fa-check';
-                setTimeout(() => icon.className = prev, 1200);
+    <div class="dino-parade-shell" aria-hidden="true">
+            <div class="dino-parade window">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <div class="control red"></div>
+                        <div class="control yellow"></div>
+                        <div class="control green"></div>
+                    </div>
+                    <div class="window-title">DINO.PARADE</div>
+                </div>
+                <div class="window-content dino-parade-track">
+                    <div class="dino-prop dino-traffic-light dino-traffic-light-a"></div>
+                    <div class="dino-prop dino-traffic-light dino-traffic-light-b"></div>
+                    <div class="dino-prop dino-traffic-light dino-traffic-light-c"></div>
+                    <div class="parade-car" aria-hidden="true">
+                        <span class="parade-car-body"></span>
+                        <span class="parade-car-roof"></span>
+                        <span class="parade-car-window"></span>
+                        <span class="parade-car-light"></span>
+                        <span class="parade-car-wheel parade-car-wheel-back"></span>
+                        <span class="parade-car-wheel parade-car-wheel-front"></span>
+                    </div>
+                    <div class="dino-road"></div>
+                    <div class="dino-ground"></div>
+                    <img class="dino-runner" style="--order: 0; --lane-offset: 0px;" src="dinos/dino-rainbow.png" alt="" loading="lazy">
+                    <img class="dino-runner" style="--order: 1; --lane-offset: 0px;" src="dinos/dino-red.png" alt="" loading="lazy">
+                    <img class="dino-runner" style="--order: 2; --lane-offset: 0px;" src="dinos/dino-orange.png" alt="" loading="lazy">
+                    <img class="dino-runner" style="--order: 3; --lane-offset: 0px;" src="dinos/dino-yellow.png" alt="" loading="lazy">
+                    <img class="dino-runner" style="--order: 4; --lane-offset: 0px;" src="dinos/dino-green.png" alt="" loading="lazy">
+                    <img class="dino-runner" style="--order: 5; --lane-offset: 0px;" src="dinos/dino-blue.png" alt="" loading="lazy">
+                    <img class="dino-runner" style="--order: 6; --lane-offset: 0px;" src="dinos/dino-black.png" alt="" loading="lazy">
+                </div>
+            </div>
+    </div>
+    </div>
+    <script>
+        document.querySelectorAll('.copy-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const text = btn.dataset.copy || '';
+                if (!text) return;
+                navigator.clipboard.writeText(text).then(() => {
+                    const icon = btn.querySelector('i');
+                    if (!icon) return;
+                    const prev = icon.className;
+                    icon.className = 'fa-solid fa-check';
+                    setTimeout(() => icon.className = prev, 1200);
+                });
             });
         });
-    });
-</script>
+    </script>
+    <script src="parade.js"></script>
+</body>
 
 </html>

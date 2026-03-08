@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Vishnu Chityala</title>
+    <link rel="icon" type="image/png" href="img/vc-pfp.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="blogs-page">
+    <div class="sky-layer"></div>
+    <div class="page-orb orb-left"></div>
+    <div class="page-orb orb-right"></div>
+    <div class="nav-shell">
+        <nav class="nav-bar">
+            <a class="nav-brand" href="index.html">
+                <span class="brand-mark">
+                    <img src="img/vc-pfp.png" alt="Vishnu Chityala">
+                </span>
+                <span>Vishnu Chityala</span>
+            </a>
+            <div class="nav-links">
+                <a class="nav-link" href="index.html">About</a>
+                <a class="nav-link active" href="blogs.html">Blogs</a>
+            </div>
+        </nav>
+    </div>
+    <div class="page-stack">
+        <div class="container">
+            <div class="window">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <div class="control red"></div>
+                        <div class="control yellow"></div>
+                        <div class="control green"></div>
+                    </div>
+                    <div class="window-title">POSTS.IDX</div>
+                </div>
+                <div class="window-content">
+                    <div class="status-chip" aria-live="polite">
+                        Few of my Nerdy Blogs
+                    </div>
+                    <div class="post-list-single" id="post-list"></div>
+                    <div class="post-pagination" id="post-pagination" aria-label="Blog pagination"></div>
+                </div>
+            </div>
+
+            <div class="modal" id="post-modal" aria-hidden="true" role="dialog">
+                <div class="modal-backdrop" id="modal-backdrop"></div>
+                <div class="modal-card window post-viewer">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <div class="control red" id="modal-close-control" role="button" aria-label="Close blog modal" tabindex="0"></div>
+                            <div class="control yellow"></div>
+                            <div class="control green"></div>
+                        </div>
+                        <div class="window-title" id="post-title">POST</div>
+                        <button class="modal-close-btn" id="modal-close-btn" type="button" aria-label="Close blog modal">
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                            <span>Close</span>
+                        </button>
+                    </div>
+                    <div class="window-content">
+                        <div class="markdown-body" id="post-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dino-parade-shell" aria-hidden="true">
+                <div class="dino-parade window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <div class="control red"></div>
+                            <div class="control yellow"></div>
+                            <div class="control green"></div>
+                        </div>
+                        <div class="window-title">DINO.PARADE</div>
+                    </div>
+                    <div class="window-content dino-parade-track">
+                        <div class="dino-prop dino-traffic-light dino-traffic-light-a"></div>
+                        <div class="dino-prop dino-traffic-light dino-traffic-light-b"></div>
+                        <div class="dino-prop dino-traffic-light dino-traffic-light-c"></div>
+                        <div class="parade-car" aria-hidden="true">
+                            <span class="parade-car-body"></span>
+                            <span class="parade-car-roof"></span>
+                            <span class="parade-car-window"></span>
+                            <span class="parade-car-light"></span>
+                            <span class="parade-car-wheel parade-car-wheel-back"></span>
+                            <span class="parade-car-wheel parade-car-wheel-front"></span>
+                        </div>
+                        <div class="dino-road"></div>
+                        <div class="dino-ground"></div>
+                        <img class="dino-runner" style="--order: 0; --lane-offset: 0px;" src="dinos/dino-rainbow.png" alt="" loading="lazy">
+                        <img class="dino-runner" style="--order: 1; --lane-offset: 0px;" src="dinos/dino-red.png" alt="" loading="lazy">
+                        <img class="dino-runner" style="--order: 2; --lane-offset: 0px;" src="dinos/dino-orange.png" alt="" loading="lazy">
+                        <img class="dino-runner" style="--order: 3; --lane-offset: 0px;" src="dinos/dino-yellow.png" alt="" loading="lazy">
+                        <img class="dino-runner" style="--order: 4; --lane-offset: 0px;" src="dinos/dino-green.png" alt="" loading="lazy">
+                        <img class="dino-runner" style="--order: 5; --lane-offset: 0px;" src="dinos/dino-blue.png" alt="" loading="lazy">
+                        <img class="dino-runner" style="--order: 6; --lane-offset: 0px;" src="dinos/dino-black.png" alt="" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        const postFiles = ['neural-networks.md'];
+        const POSTS_PER_PAGE = 5;
+
+        const listEl = document.getElementById('post-list');
+        const paginationEl = document.getElementById('post-pagination');
+        const titleEl = document.getElementById('post-title');
+        const contentEl = document.getElementById('post-content');
+        const modal = document.getElementById('post-modal');
+        const backdrop = document.getElementById('modal-backdrop');
+        const modalCloseControl = document.getElementById('modal-close-control');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        let allPosts = [];
+        let currentPage = 1;
+
+        function parseFrontMatter(md) {
+            // Support \n / \r\n, optional BOM, optional leading whitespace
+            const clean = md.replace(/^\uFEFF/, '');
+            const match = clean.match(/^[\t ]*---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
+            if (!match) return { meta: {}, body: clean };
+            const meta = {};
+            match[1].split(/\r?\n/).forEach(line => {
+                const [rawKey, ...rest] = line.split(':');
+                if (!rawKey || rest.length === 0) return;
+                const key = rawKey.trim().toLowerCase();
+                meta[key] = rest.join(':').trim();
+            });
+            return { meta, body: clean.slice(match[0].length) };
+        }
+
+        function enhanceCodeBlocks() {
+            contentEl.querySelectorAll('pre').forEach((pre) => {
+                if (pre.querySelector('.code-copy-btn')) return;
+
+                const code = pre.querySelector('code');
+                const toolbar = document.createElement('div');
+                toolbar.className = 'code-block-toolbar';
+
+                const label = document.createElement('span');
+                label.className = 'code-block-label';
+                label.textContent = 'Code Block';
+
+                const copyBtn = document.createElement('button');
+                copyBtn.type = 'button';
+                copyBtn.className = 'code-copy-btn';
+                copyBtn.setAttribute('aria-label', 'Copy code block');
+                copyBtn.innerHTML = '<i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy</span>';
+
+                copyBtn.addEventListener('click', async () => {
+                    const text = code ? code.innerText : pre.innerText;
+                    if (!text) return;
+
+                    try {
+                        await navigator.clipboard.writeText(text);
+                        copyBtn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i><span>Copied</span>';
+                        setTimeout(() => {
+                            copyBtn.innerHTML = '<i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy</span>';
+                        }, 1200);
+                    } catch (_) {
+                        copyBtn.innerHTML = '<span>Failed</span>';
+                        setTimeout(() => {
+                            copyBtn.innerHTML = '<i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy</span>';
+                        }, 1200);
+                    }
+                });
+
+                toolbar.appendChild(label);
+                toolbar.appendChild(copyBtn);
+                pre.prepend(toolbar);
+            });
+        }
+
+        function renderList(posts) {
+            listEl.innerHTML = '';
+
+            if (!posts.length) {
+                listEl.innerHTML = '<p class="muted-text">No blogs found yet.</p>';
+                return;
+            }
+
+            posts.forEach((post) => {
+                const row = document.createElement('button');
+                row.type = 'button';
+                row.className = 'post-row';
+                row.setAttribute('data-slug', post.slug);
+                row.innerHTML = `
+                    <div class=\"row-title\">${post.title || post.slug}</div>
+                    <div class=\"row-meta\">
+                        <span>${post.date || 'Unknown date'}</span>
+                        ${post.tags ? post.tags.split(',').map(t => `<span class=\"pill\">${t.trim()}</span>`).join('') : ''}
+                    </div>
+                    <p class=\"muted-text\">${post.summary || 'No summary provided.'}</p>
+                `;
+                row.addEventListener('click', () => loadPost(post));
+                listEl.appendChild(row);
+            });
+        }
+
+        function renderPagination(posts) {
+            paginationEl.innerHTML = '';
+
+            const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+            if (totalPages <= 1) {
+                paginationEl.hidden = true;
+                return;
+            }
+
+            paginationEl.hidden = false;
+
+            const prevBtn = document.createElement('button');
+            prevBtn.type = 'button';
+            prevBtn.className = 'page-btn';
+            prevBtn.textContent = 'Prev';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.addEventListener('click', () => setPage(currentPage - 1));
+            paginationEl.appendChild(prevBtn);
+
+            for (let page = 1; page <= totalPages; page += 1) {
+                const pageBtn = document.createElement('button');
+                pageBtn.type = 'button';
+                pageBtn.className = `page-btn${page === currentPage ? ' active' : ''}`;
+                pageBtn.textContent = String(page);
+                pageBtn.setAttribute('aria-label', `Go to page ${page}`);
+                if (page === currentPage) {
+                    pageBtn.setAttribute('aria-current', 'page');
+                }
+                pageBtn.addEventListener('click', () => setPage(page));
+                paginationEl.appendChild(pageBtn);
+            }
+
+            const nextBtn = document.createElement('button');
+            nextBtn.type = 'button';
+            nextBtn.className = 'page-btn';
+            nextBtn.textContent = 'Next';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.addEventListener('click', () => setPage(currentPage + 1));
+            paginationEl.appendChild(nextBtn);
+        }
+
+        function renderPage() {
+            const start = (currentPage - 1) * POSTS_PER_PAGE;
+            const pagedPosts = allPosts.slice(start, start + POSTS_PER_PAGE);
+            renderList(pagedPosts);
+            renderPagination(allPosts);
+        }
+
+        function setPage(page) {
+            const totalPages = Math.max(1, Math.ceil(allPosts.length / POSTS_PER_PAGE));
+            currentPage = Math.min(Math.max(page, 1), totalPages);
+            renderPage();
+        }
+
+        async function loadPost(post) {
+            modal.setAttribute('aria-hidden', 'false');
+            modal.classList.add('open');
+            document.body.classList.add('modal-open');
+            titleEl.textContent = 'LOADING…';
+            contentEl.innerHTML = '<p class=\"muted-text\">Fetching markdown...</p>';
+
+            try {
+                const res = await fetch(`blogs/${post.slug}`, { cache: 'no-cache' });
+                if (!res.ok) throw new Error('Post not found');
+                const md = await res.text();
+                const { body } = parseFrontMatter(md);
+                const html = window.marked ? window.marked.parse(body) : body;
+                titleEl.textContent = post.title || post.slug;
+                contentEl.innerHTML = html;
+                enhanceCodeBlocks();
+            } catch (err) {
+                titleEl.textContent = 'ERROR';
+                contentEl.innerHTML = `<p class=\"muted-text\">${err.message}. Check that the markdown file exists.</p>`;
+            }
+        }
+
+        async function bootstrap() {
+            const posts = [];
+            for (const file of postFiles) {
+                try {
+                    const res = await fetch(`blogs/${file}`, { cache: 'no-cache' });
+                    if (!res.ok) continue;
+                    const md = await res.text();
+                    const { meta } = parseFrontMatter(md);
+                    posts.push({ slug: file, ...meta });
+                } catch (_) {
+                    // skip broken files silently
+                }
+            }
+            allPosts = posts;
+            currentPage = 1;
+            renderPage();
+        }
+
+        function closeModal() {
+            modal.setAttribute('aria-hidden', 'true');
+            modal.classList.remove('open');
+            document.body.classList.remove('modal-open');
+        }
+
+        backdrop.addEventListener('click', closeModal);
+        modalCloseControl.addEventListener('click', closeModal);
+        modalCloseControl.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                closeModal();
+            }
+        });
+        modalCloseBtn.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        bootstrap();
+    </script>
+    <script src="parade.js"></script>
+</body>
+
+</html>
