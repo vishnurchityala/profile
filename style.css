@@ -19,6 +19,13 @@
   --shadow: 12px 12px 0 rgba(42, 29, 25, 0.12);
 }
 
+body{
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 .nav-shell {
   width: min(1200px, 100%);
   margin: 0 auto 28px;
@@ -639,6 +646,148 @@ a {
 
 .dino-parade {
   width: 100%;
+}
+
+.dino-parade .window-content {
+  display: grid;
+  gap: 16px;
+}
+
+.dino-parade-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.parade-crew-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border: 3px solid var(--border-color);
+  background: linear-gradient(180deg, #df7c55 0%, #b65036 100%);
+  color: #fffaf1;
+  font-family: var(--pixel-font-title);
+  font-size: 10px;
+  box-shadow: inset -3px -3px 0 rgba(42, 29, 25, 0.12), inset 3px 3px 0 rgba(255, 255, 255, 0.2);
+  transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+}
+
+.parade-crew-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--border-color);
+  background: linear-gradient(180deg, #ee8a63 0%, #c55438 100%);
+}
+
+.dino-page .container {
+  display: block;
+  width: 100%;
+}
+
+.dino-page .window {
+  width: 100%;
+  margin: 0 auto 28px;
+}
+
+.dino-overview-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) 320px;
+  gap: 24px;
+  align-items: center;
+  background:
+    radial-gradient(circle at top right, rgba(25, 91, 97, 0.12), transparent 32%),
+    linear-gradient(180deg, rgba(255,255,255,0.2), transparent 42%),
+    linear-gradient(135deg, #fffaf3 0%, #f7e7d4 55%, #f0ddcb 100%);
+}
+
+.dino-lineup {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 18px;
+  border: 3px solid var(--border-color);
+  background:
+    radial-gradient(circle at top right, rgba(25, 91, 97, 0.08), transparent 34%),
+    linear-gradient(180deg, #fffdf8 0%, #f4e8da 100%);
+  box-shadow: inset -4px -4px 0 rgba(42, 29, 25, 0.1), inset 4px 4px 0 rgba(255, 255, 255, 0.22);
+}
+
+.dino-lineup img {
+  width: 74px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 0 rgba(42, 29, 25, 0.12));
+}
+
+.dino-about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+
+.dino-card,
+.dino-protocol-item {
+  padding: 18px;
+  border: 3px solid var(--border-color);
+  background: linear-gradient(180deg, #fff7ee 0%, #efdccc 100%);
+  box-shadow: inset -4px -4px 0 rgba(42, 29, 25, 0.08), inset 4px 4px 0 rgba(255, 255, 255, 0.24);
+}
+
+.dino-card {
+  display: grid;
+  gap: 14px;
+}
+
+.dino-card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dino-card-figure {
+  width: 88px;
+  min-width: 88px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--border-color);
+  background: linear-gradient(180deg, #fffdf8 0%, #d6f0f2 100%);
+  box-shadow: inset -3px -3px 0 rgba(42, 29, 25, 0.12), inset 3px 3px 0 rgba(255, 255, 255, 0.24);
+}
+
+.dino-card-figure img {
+  width: 72px;
+  height: auto;
+  object-fit: contain;
+}
+
+.dino-card-name,
+.dino-protocol-item h3 {
+  font-family: var(--pixel-font-title);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.dino-card-role {
+  color: var(--accent-deep);
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.dino-card p,
+.dino-protocol-item p {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.dino-protocol-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .dino-parade-track {
@@ -1755,7 +1904,9 @@ a {
 
   .hero-panel,
   .content-grid,
-  .blog-layout {
+  .blog-layout,
+  .dino-overview-panel,
+  .dino-protocol-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1835,6 +1986,28 @@ a {
     --parade-car-width: 84px;
     --parade-car-height: 36px;
     height: 138px;
+  }
+
+  .dino-parade-cta {
+    align-items: stretch;
+  }
+
+  .parade-crew-link {
+    width: 100%;
+  }
+
+  .dino-card-top {
+    align-items: flex-start;
+  }
+
+  .dino-card-figure {
+    width: 74px;
+    min-width: 74px;
+  }
+
+  .dino-card-figure img,
+  .dino-lineup img {
+    width: 58px;
   }
 
   .dino-prop {
