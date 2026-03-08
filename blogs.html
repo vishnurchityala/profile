@@ -120,7 +120,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        const postFiles = ['neural-networks.md'];
         const POSTS_PER_PAGE = 5;
 
         const listEl = document.getElementById('post-list');
@@ -147,6 +146,38 @@
                 meta[key] = rest.join(':').trim();
             });
             return { meta, body: clean.slice(match[0].length) };
+        }
+
+        function normalizePostFile(href) {
+            const cleanHref = href.split('#')[0].split('?')[0];
+            if (!cleanHref.toLowerCase().endsWith('.md')) return null;
+
+            const withoutLeadingSlash = cleanHref.replace(/^\/+/, '');
+            if (withoutLeadingSlash.startsWith('blogs/')) {
+                return withoutLeadingSlash.slice('blogs/'.length);
+            }
+            if (withoutLeadingSlash.includes('/')) return null;
+            return withoutLeadingSlash;
+        }
+
+        async function discoverPostFiles() {
+            const files = new Set();
+
+            try {
+                const res = await fetch('blogs/', { cache: 'no-cache' });
+                if (!res.ok) return [];
+                const html = await res.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                doc.querySelectorAll('a[href]').forEach((link) => {
+                    const normalized = normalizePostFile(link.getAttribute('href') || '');
+                    if (normalized) files.add(normalized);
+                });
+            } catch (_) {
+                return [];
+            }
+
+            return Array.from(files).sort((a, b) => a.localeCompare(b));
         }
 
         function enhanceCodeBlocks() {
@@ -297,6 +328,7 @@
         }
 
         async function bootstrap() {
+            const postFiles = await discoverPostFiles();
             const posts = [];
             for (const file of postFiles) {
                 try {
@@ -309,6 +341,17 @@
                     // skip broken files silently
                 }
             }
+            posts.sort((a, b) => {
+                const timeA = Date.parse(a.date || '');
+                const timeB = Date.parse(b.date || '');
+                const validA = Number.isFinite(timeA);
+                const validB = Number.isFinite(timeB);
+
+                if (validA && validB) return timeB - timeA;
+                if (validA) return -1;
+                if (validB) return 1;
+                return (a.title || a.slug).localeCompare(b.title || b.slug);
+            });
             allPosts = posts;
             currentPage = 1;
             renderPage();
