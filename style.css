@@ -1842,6 +1842,16 @@ a {
     transform-origin: bottom center;
   }
 
+  .dino-runner[data-dino] {
+    display: none;
+  }
+
+  .dino-runner[data-dino="red"],
+  .dino-runner[data-dino="green"],
+  .dino-runner[data-dino="blue"] {
+    display: block;
+  }
+
   .dino-traffic-light-a {
     left: 12%;
   }

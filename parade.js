@@ -24,6 +24,8 @@
     const scene = {
       track,
       dinos,
+      activeDinos: [],
+      activeSignature: '',
       car,
       dir: 1,
       phase: 'approach',
@@ -50,27 +52,43 @@
       const nextGap = px(styles.getPropertyValue('--dino-gap'), scene.dinoGap);
       const nextCarWidth = car.offsetWidth || px(styles.getPropertyValue('--parade-car-width'), scene.carWidth);
       const widthRatio = scene.trackWidth ? nextTrackWidth / scene.trackWidth : 1;
+      const nextActiveDinos = dinos.filter((dino) => getComputedStyle(dino.el).display !== 'none');
+      const activeDinos = nextActiveDinos.length ? nextActiveDinos : dinos;
+      const nextActiveSignature = activeDinos
+        .map((dino) => dino.el.dataset.dino || '')
+        .join('|');
+      const activeChanged = nextActiveSignature !== scene.activeSignature;
 
       scene.trackWidth = nextTrackWidth;
       scene.dinoSize = nextDinoSize;
       scene.dinoGap = nextGap;
       scene.carWidth = nextCarWidth;
+      scene.activeDinos = activeDinos;
+      scene.activeSignature = nextActiveSignature;
       scene.stopGap = Math.max(18, nextDinoSize * 0.18);
       scene.dinoSpeed = Math.max(36, nextTrackWidth * 0.06);
       scene.carSpeed = scene.dinoSpeed * 1.55;
       scene.carReverseSpeed = scene.carSpeed * 1.12;
 
-      if (!scene.initialized) {
-        const convoySpan = nextDinoSize + nextGap * (dinos.length - 1);
+      if (!scene.initialized || activeChanged) {
+        const convoySpan = nextDinoSize + nextGap * (activeDinos.length - 1);
         const leftPadding = Math.max(12, Math.min(30, (nextTrackWidth - convoySpan) * 0.16));
 
-        dinos.forEach((dino, index) => {
-          dino.x = leftPadding + (dinos.length - 1 - index) * nextGap;
+        activeDinos.forEach((dino, index) => {
+          dino.x = leftPadding + (activeDinos.length - 1 - index) * nextGap;
         });
 
-        scene.carApproachDir = -1;
-        scene.carFacing = -1;
-        scene.carX = nextTrackWidth + 32;
+        dinos.forEach((dino) => {
+          if (!activeDinos.includes(dino)) {
+            dino.x = -nextDinoSize - 64;
+          }
+        });
+
+        scene.phase = 'approach';
+        scene.pauseLeft = 0;
+        scene.honkLeft = 0;
+        scene.car.classList.remove('is-honking');
+        resetCar(scene);
         scene.initialized = true;
         return;
       }
@@ -123,6 +141,8 @@
   }
 
   function updateScene(scene, dt, seconds) {
+    const activeDinos = scene.activeDinos.length ? scene.activeDinos : scene.dinos;
+
     if (scene.honkLeft > 0) {
       scene.honkLeft -= dt;
       if (scene.honkLeft <= 0) {
@@ -132,15 +152,15 @@
     }
 
     if (scene.phase === 'approach') {
-      scene.dinos.forEach((dino) => {
+      activeDinos.forEach((dino) => {
         dino.x += scene.dinoSpeed * dt * scene.dir;
       });
 
       scene.carX += scene.carSpeed * dt * scene.carApproachDir;
 
       const leader = scene.dir === 1
-        ? scene.dinos[0]
-        : scene.dinos[scene.dinos.length - 1];
+        ? activeDinos[0]
+        : activeDinos[activeDinos.length - 1];
 
       const distance = scene.dir === 1
         ? scene.carX - (leader.x + scene.dinoSize)
@@ -175,7 +195,7 @@
     const dinoBounceAmp = dinosAreMoving ? 5 : 0;
     const dinoTiltAmp = dinosAreMoving ? 4.5 : 0;
 
-    scene.dinos.forEach((dino) => {
+    activeDinos.forEach((dino) => {
       const wave = seconds * 8 + dino.phaseOffset;
       const bounce = Math.sin(wave) * dinoBounceAmp;
       const tilt = Math.sin(wave) * dinoTiltAmp;
