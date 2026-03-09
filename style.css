@@ -450,6 +450,42 @@ body {
   line-height: 1.55;
 }
 
+.markdown-body a.markdown-link {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(25, 91, 97, 0.55);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  transition: color 0.14s ease, text-decoration-color 0.14s ease;
+}
+
+.markdown-body a.markdown-link:hover {
+  color: var(--accent-deep);
+  text-decoration-color: rgba(181, 58, 36, 0.6);
+}
+
+.markdown-body a.markdown-link:focus-visible {
+  outline: 2px solid rgba(223, 91, 57, 0.45);
+  outline-offset: 2px;
+}
+
+.markdown-body a.markdown-url-link {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(25, 91, 97, 0.12);
+  border: 1px solid rgba(25, 91, 97, 0.28);
+  font-size: 0.95em;
+}
+
+.markdown-body a.markdown-url-link.markdown-link-external::after {
+  content: " ↗";
+  font-size: 0.9em;
+}
+
 .markdown-body blockquote {
   border-left: 4px solid var(--accent);
   padding-left: 12px;

@@ -259,6 +259,43 @@
             });
         }
 
+        function normalizeUrlText(value) {
+            return value.trim().replace(/\/+$/, '');
+        }
+
+        function isRawUrlLink(link) {
+            const href = link.getAttribute('href');
+            if (!href) return false;
+            const text = (link.textContent || '').trim();
+            if (!text) return false;
+            return normalizeUrlText(text) === normalizeUrlText(href);
+        }
+
+        function enhanceMarkdownLinks() {
+            contentEl.querySelectorAll('a[href]').forEach((link) => {
+                const href = link.getAttribute('href') || '';
+                if (!href) return;
+
+                link.classList.add('markdown-link');
+
+                if (isRawUrlLink(link)) {
+                    link.classList.add('markdown-url-link');
+                }
+
+                try {
+                    const url = new URL(href, window.location.href);
+                    const isExternal = url.origin !== window.location.origin && /^https?:$/i.test(url.protocol);
+                    if (isExternal) {
+                        link.classList.add('markdown-link-external');
+                        link.setAttribute('target', '_blank');
+                        link.setAttribute('rel', 'noopener noreferrer');
+                    }
+                } catch (_) {
+                    // Keep relative or custom-protocol links untouched.
+                }
+            });
+        }
+
         function renderList(posts) {
             listEl.innerHTML = '';
 
@@ -357,6 +394,7 @@
                 const html = window.marked ? window.marked.parse(body) : body;
                 titleEl.textContent = post.title || post.slug;
                 contentEl.innerHTML = html;
+                enhanceMarkdownLinks();
                 enhanceCodeBlocks();
             } catch (err) {
                 titleEl.textContent = 'ERROR';
