@@ -387,10 +387,70 @@
                     </div>
                     <div class="dino-parade-cta">
                         <p class="muted-text">Meet the personalities behind the convoy.</p>
-                        <a class="parade-crew-link" href="about-dinos.html">ABOUT DINO'S</a>
+                        <div class="dino-parade-actions">
+                            <button class="parade-game-link" id="open-dino-game" type="button">
+                                <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                                <span>PLAY WITH DINO</span>
+                            </button>
+                            <a class="parade-crew-link" href="about-dinos.html">ABOUT DINO'S</a>
+                        </div>
                     </div>
                 </div>
             </div>
+    </div>
+
+    <div class="modal dino-game-modal" id="dino-game-modal" aria-hidden="true" role="dialog" aria-labelledby="dino-game-title">
+        <div class="modal-backdrop" id="dino-game-backdrop"></div>
+        <div class="modal-card window dino-game-card" role="document">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control red" id="dino-game-close-control" role="button" aria-label="Close dino game modal" tabindex="0"></div>
+                    <div class="control yellow"></div>
+                    <div class="control green"></div>
+                </div>
+                <div class="window-title" id="dino-game-title">DINO.CATCH.EXE</div>
+                <button class="modal-close-btn" id="dino-game-close-btn" type="button" aria-label="Close dino game modal">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    <span>Close</span>
+                </button>
+            </div>
+            <div class="window-content dino-game-content">
+                <div class="dino-game-compact-row">
+                    <p class="dino-game-rule">Forest cave mode: catch 7 dinos in 60 seconds. Dino waves pop from 15 rock caves.</p>
+                    <div class="dino-game-controls">
+                        <button class="parade-game-link dino-game-start-btn" id="dino-game-start-btn" type="button">
+                            <i class="fa-solid fa-play" aria-hidden="true"></i>
+                            <span>START</span>
+                        </button>
+                        <button class="dino-game-reset-btn" id="dino-game-reset-btn" type="button">
+                            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+                            <span>RESET</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dino-game-hud">
+                    <div class="dino-hud-chip">
+                        <span>Caught</span>
+                        <strong id="dino-game-score">0 / 7</strong>
+                    </div>
+                    <div class="dino-hud-chip">
+                        <span>Time Left</span>
+                        <strong id="dino-game-time">60s</strong>
+                    </div>
+                    <div class="dino-hud-chip">
+                        <span>State</span>
+                        <strong id="dino-game-state">READY</strong>
+                    </div>
+                </div>
+
+                <p class="dino-game-status muted-text" id="dino-game-status" aria-live="polite">Press Start. Dinos will pop from caves in waves.</p>
+
+                <div class="dino-game-board-shell">
+                    <div class="dino-game-board" id="dino-game-board" aria-label="Dino catch game board"></div>
+                </div>
+            </div>
+        </div>
     </div>
     </div>
     <script>
@@ -410,6 +470,7 @@
     </script>
     <script src="nav.js"></script>
     <script src="parade.js"></script>
+    <script src="dino-game.js"></script>
 </body>
 
 </html>

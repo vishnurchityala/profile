@@ -753,13 +753,21 @@ a {
   flex-wrap: wrap;
 }
 
-.parade-crew-link {
+.dino-parade-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.parade-crew-link,
+.parade-game-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   padding: 10px 14px;
   border: 3px solid var(--border-color);
-  background: linear-gradient(180deg, #df7c55 0%, #b65036 100%);
   color: #fffaf1;
   font-family: var(--pixel-font-title);
   font-size: 10px;
@@ -767,10 +775,360 @@ a {
   transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
 }
 
+.parade-crew-link {
+  background: linear-gradient(180deg, #df7c55 0%, #b65036 100%);
+}
+
+.parade-game-link {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: linear-gradient(180deg, #2b7f89 0%, #195b61 100%);
+}
+
 .parade-crew-link:hover {
   transform: translate(-2px, -2px);
   box-shadow: 3px 3px 0 var(--border-color);
   background: linear-gradient(180deg, #ee8a63 0%, #c55438 100%);
+}
+
+.parade-game-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--border-color);
+  background: linear-gradient(180deg, #36909b 0%, #1b6670 100%);
+}
+
+.dino-game-modal .modal-backdrop {
+  background:
+    radial-gradient(circle at top, rgba(255, 209, 159, 0.22), transparent 34%),
+    rgba(15, 10, 8, 0.62);
+  backdrop-filter: blur(2px);
+}
+
+.dino-game-modal .modal-card.dino-game-card {
+  width: min(980px, calc(100vw - 32px));
+  height: min(740px, calc(100vh - 24px));
+  margin: 0;
+}
+
+.dino-game-card .window-content {
+  overflow: hidden;
+}
+
+.dino-game-content {
+  display: grid;
+  gap: 10px;
+  height: 100%;
+  grid-template-rows: auto auto auto minmax(0, 1fr);
+  background:
+    radial-gradient(circle at top right, rgba(25, 91, 97, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 42%),
+    linear-gradient(135deg, #fffaf3 0%, #f7e7d4 55%, #f0ddcb 100%);
+}
+
+.dino-game-compact-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.dino-game-rule {
+  padding: 8px 10px;
+  border: 3px solid var(--border-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+  background:
+    radial-gradient(circle at top right, rgba(25, 91, 97, 0.1), transparent 40%),
+    linear-gradient(180deg, #fffdf8 0%, #f4e8da 100%);
+  box-shadow: inset -3px -3px 0 rgba(42, 29, 25, 0.08), inset 3px 3px 0 rgba(255, 255, 255, 0.2);
+}
+
+.dino-game-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.dino-game-start-btn,
+.dino-game-reset-btn {
+  min-width: 118px;
+  min-height: 42px;
+}
+
+.dino-game-reset-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 3px solid var(--border-color);
+  background: linear-gradient(180deg, #fffdf8 0%, #f5e9dc 100%);
+  color: var(--ink);
+  font-family: var(--pixel-font-title);
+  font-size: 10px;
+  cursor: pointer;
+  box-shadow: inset -3px -3px 0 rgba(42, 29, 25, 0.12), inset 3px 3px 0 rgba(255, 255, 255, 0.24);
+  transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+}
+
+.dino-game-reset-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--border-color);
+  background: linear-gradient(180deg, #fff1e1 0%, #ffd3b0 100%);
+}
+
+.dino-game-start-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.74;
+  transform: none;
+  box-shadow: inset -3px -3px 0 rgba(42, 29, 25, 0.12), inset 3px 3px 0 rgba(255, 255, 255, 0.2);
+}
+
+.dino-game-start-btn:disabled:hover {
+  transform: none;
+  box-shadow: inset -3px -3px 0 rgba(42, 29, 25, 0.12), inset 3px 3px 0 rgba(255, 255, 255, 0.2);
+  background: linear-gradient(180deg, #2b7f89 0%, #195b61 100%);
+}
+
+.dino-game-hud {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.dino-hud-chip {
+  padding: 8px 10px;
+  border: 3px solid var(--border-color);
+  background: linear-gradient(180deg, #fff8ef 0%, #f2dfce 100%);
+  box-shadow: inset -3px -3px 0 rgba(42, 29, 25, 0.1), inset 3px 3px 0 rgba(255, 255, 255, 0.24);
+  display: grid;
+  gap: 4px;
+}
+
+.dino-hud-chip span {
+  font-family: var(--pixel-font-title);
+  font-size: 8px;
+  color: var(--muted);
+}
+
+.dino-hud-chip strong {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.dino-game-status {
+  padding: 8px 10px;
+  border: 3px solid var(--border-color);
+  background: linear-gradient(180deg, #fffdf8 0%, #f4e8da 100%);
+  font-weight: 700;
+  font-size: 14px;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  box-shadow: inset -3px -3px 0 rgba(42, 29, 25, 0.08), inset 3px 3px 0 rgba(255, 255, 255, 0.2);
+}
+
+.dino-game-status.is-win {
+  color: #0f5f35;
+  background: linear-gradient(180deg, #e8fff2 0%, #d2f6e2 100%);
+}
+
+.dino-game-status.is-lose {
+  color: #7a1f19;
+  background: linear-gradient(180deg, #ffefe9 0%, #ffd8cc 100%);
+}
+
+.dino-game-board-shell {
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  min-height: 0;
+  border: 3px solid var(--border-color);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(174, 219, 153, 0.28) 0 12%, transparent 32%),
+    radial-gradient(circle at 82% 18%, rgba(133, 194, 154, 0.2) 0 10%, transparent 30%),
+    linear-gradient(180deg, #395c41 0%, #2f4f38 36%, #556742 64%, #5e503a 100%);
+  box-shadow: inset -4px -4px 0 rgba(42, 29, 25, 0.1), inset 4px 4px 0 rgba(255, 255, 255, 0.22);
+}
+
+.dino-game-board-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(22, 45, 31, 0.34) 0 10px,
+      rgba(22, 45, 31, 0.1) 10px 20px
+    ),
+    linear-gradient(180deg, rgba(11, 30, 20, 0.44) 0%, transparent 46%);
+}
+
+.dino-game-board-shell::after {
+  content: "";
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  bottom: -6%;
+  height: 38%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 8% 24%, rgba(90, 75, 61, 0.76) 0 14px, transparent 14px),
+    radial-gradient(circle at 24% 42%, rgba(76, 63, 51, 0.74) 0 18px, transparent 18px),
+    radial-gradient(circle at 41% 30%, rgba(98, 82, 67, 0.7) 0 16px, transparent 16px),
+    radial-gradient(circle at 58% 46%, rgba(75, 60, 49, 0.72) 0 20px, transparent 20px),
+    radial-gradient(circle at 74% 26%, rgba(92, 77, 63, 0.74) 0 16px, transparent 16px),
+    radial-gradient(circle at 90% 44%, rgba(78, 64, 52, 0.74) 0 19px, transparent 19px);
+}
+
+.dino-game-board {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.dino-hole {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  overflow: hidden;
+  min-height: 62px;
+  border: 3px solid var(--border-color);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.16) 0 14%, transparent 36%),
+    radial-gradient(circle at 82% 28%, rgba(255, 255, 255, 0.09) 0 12%, transparent 34%),
+    radial-gradient(circle at 32% 70%, rgba(29, 22, 17, 0.3) 0 14%, transparent 32%),
+    radial-gradient(circle at 70% 76%, rgba(37, 27, 21, 0.24) 0 16%, transparent 34%),
+    linear-gradient(160deg, #8b7a6d 0%, #75675b 44%, #625349 72%, #53463d 100%);
+  box-shadow: inset -4px -4px 0 rgba(24, 15, 12, 0.24), inset 3px 3px 0 rgba(255, 244, 231, 0.12);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dino-hole::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 8%;
+  height: 58%;
+  border: 3px solid #2d221d;
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0 / 86% 86% 0 0;
+  background:
+    radial-gradient(circle at 24% 24%, rgba(255, 255, 255, 0.16) 0 11%, transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(111, 90, 77, 0.24) 45%, rgba(70, 56, 48, 0.36) 100%);
+  box-shadow: inset -3px -2px 0 rgba(34, 22, 18, 0.2), inset 2px 2px 0 rgba(255, 240, 226, 0.12);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dino-hole::after {
+  content: "";
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: 7%;
+  height: 18%;
+  border: 2px solid #2c211b;
+  border-radius: 999px;
+  background:
+    repeating-linear-gradient(
+      110deg,
+      rgba(92, 75, 63, 0.95) 0 9px,
+      rgba(77, 63, 53, 0.95) 9px 18px
+    );
+  box-shadow: inset -2px -2px 0 rgba(35, 24, 19, 0.24), inset 2px 1px 0 rgba(255, 244, 232, 0.16);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.dino-hole:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 var(--border-color), inset -4px -4px 0 rgba(24, 15, 12, 0.24), inset 3px 3px 0 rgba(255, 244, 231, 0.12);
+}
+
+.dino-hole:active {
+  transform: translate(0, 0);
+}
+
+.dino-hole-mouth {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 10%;
+  height: 36%;
+  border: 3px solid #201713;
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(22, 15, 12, 0.94) 0%, rgba(14, 8, 6, 1) 100%);
+  box-shadow: inset -4px -2px 0 rgba(0, 0, 0, 0.4), inset 2px 1px 0 rgba(255, 255, 255, 0.08);
+  z-index: 2;
+}
+
+.dino-pop {
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  width: 64%;
+  max-width: 64px;
+  transform: translate(-50%, 90%) scale(0.88);
+  opacity: 0;
+  transition: transform 0.17s ease, opacity 0.17s ease, filter 0.17s ease;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 4px 0 rgba(25, 17, 13, 0.3));
+  z-index: 3;
+}
+
+.dino-hole.is-up .dino-pop {
+  transform: translate(-50%, -7%) scale(1);
+  opacity: 1;
+}
+
+.dino-hole.is-hit {
+  animation: dino-hole-shake 0.2s ease;
+}
+
+.dino-hole.is-hit .dino-pop {
+  animation: dino-pop-hit 0.2s ease;
+}
+
+@keyframes dino-pop-hit {
+  0% {
+    transform: translate(-50%, -6%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -12%) scale(1.12);
+  }
+  100% {
+    transform: translate(-50%, 68%) scale(0.82);
+    opacity: 0;
+  }
+}
+
+@keyframes dino-hole-shake {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-2px, 1px);
+  }
+  75% {
+    transform: translate(2px, -1px);
+  }
 }
 
 .dino-page .container {
@@ -2074,6 +2432,16 @@ a {
     height: 160px;
   }
 
+  .dino-game-compact-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dino-game-board {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
 }
 
 @media (max-width: 640px) {
@@ -2181,6 +2549,10 @@ a {
     align-items: stretch;
   }
 
+  .dino-parade-actions {
+    width: 100%;
+  }
+
   .dino-overview-copy h1 {
     font-size: 1.35rem;
     line-height: 1.22;
@@ -2210,8 +2582,62 @@ a {
     text-align: center;
   }
 
-  .parade-crew-link {
+  .parade-crew-link,
+  .parade-game-link {
     width: 100%;
+  }
+
+  .dino-game-content {
+    gap: 8px;
+  }
+
+  .dino-game-controls {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .dino-game-controls .parade-game-link,
+  .dino-game-reset-btn {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    min-height: 40px;
+  }
+
+  .dino-game-hud {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .dino-game-board-shell {
+    padding: 8px;
+  }
+
+  .dino-game-board {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .dino-hole {
+    min-height: 56px;
+  }
+
+  .dino-pop {
+    max-width: 54px;
+  }
+
+  .dino-hud-chip {
+    padding: 7px 8px;
+  }
+
+  .dino-hud-chip strong {
+    font-size: 13px;
+  }
+
+  .dino-game-rule,
+  .dino-game-status {
+    font-size: 12px;
   }
 
   .dino-card-top {
