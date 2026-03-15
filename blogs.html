@@ -4,21 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - Vishnu Chityala</title>
+    <title>Technical Blogs by Vishnu Chityala | Software, AI, and Development Notes</title>
+    <meta name="description" content="Read technical blogs by Vishnu Chityala on software engineering, AI, machine learning, backend systems, frontend development, and developer experiments.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vishnuchityala.in/blogs.html">
     <link rel="icon" type="image/png" href="img/vc-pfp.png">
+    <meta property="og:title" content="Technical Blogs by Vishnu Chityala">
+    <meta property="og:description" content="Technical writing and experiments on software engineering, AI, backend systems, frontend work, and developer learning notes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vishnuchityala.in/blogs.html">
+    <meta property="og:image" content="https://vishnuchityala.in/img/profile.jpg">
+    <meta property="og:site_name" content="Vishnu Chityala Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Technical Blogs by Vishnu Chityala">
+    <meta name="twitter:description" content="Technical writing and experiments on software engineering, AI, backend systems, frontend work, and developer learning notes.">
+    <meta name="twitter:image" content="https://vishnuchityala.in/img/profile.jpg">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Vishnu Chityala",
+            "url": "https://vishnuchityala.in/",
+            "image": "https://vishnuchityala.in/img/profile.jpg",
+            "jobTitle": "Software Developer",
+            "description": "Developer portfolio and technical blog for Vishnu Chityala covering software engineering, AI, machine learning, backend systems, and frontend development.",
+            "sameAs": [
+                "https://www.linkedin.com/in/vishnuchityala/",
+                "https://github.com/vishnurchityala",
+                "https://leetcode.com/u/vishnurchityala/",
+                "https://www.codechef.com/users/vishnu1275"
+            ],
+            "knowsAbout": [
+                "Software Engineering",
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Backend Development",
+                "Frontend Development",
+                "FastAPI",
+                "React",
+                "Django REST"
+            ]
+        }
+    </script>
 </head>
 
 <body class="blogs-page">
     <div class="sky-layer"></div>
     <div class="page-orb orb-left"></div>
     <div class="page-orb orb-right"></div>
-    <div class="nav-shell">
-        <nav class="nav-bar">
+    <header class="nav-shell">
+        <nav class="nav-bar" aria-label="Primary navigation">
             <a class="nav-brand" href="index.html">
                 <span class="brand-mark">
-                    <img src="img/vc-pfp.png" alt="Vishnu Chityala">
+                    <img src="img/vc-pfp.png" alt="Vishnu Chityala profile icon">
                 </span>
                 <span>Vishnu Chityala</span>
             </a>
@@ -33,10 +88,11 @@
                 <a class="nav-link" href="about-dinos.html">About Dino's</a>
             </div>
         </nav>
-    </div>
-    <div class="page-stack">
+    </header>
+    <main class="page-stack" id="main-content">
+        <h1 class="sr-only">Technical blogs by Vishnu Chityala</h1>
         <div class="container">
-            <div class="window">
+            <section class="window" aria-labelledby="blogs-section-heading">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -46,17 +102,18 @@
                     <div class="window-title">POSTS.IDX</div>
                 </div>
                 <div class="window-content">
+                    <h2 class="sr-only" id="blogs-section-heading">Blog post directory</h2>
                     <div class="status-chip" aria-live="polite">
                         Few of my Nerdy Blogs
                     </div>
-                    <div class="post-list-single" id="post-list"></div>
-                    <div class="post-pagination" id="post-pagination" aria-label="Blog pagination"></div>
+                    <section class="post-list-single" id="post-list" aria-label="Blog posts list"></section>
+                    <nav class="post-pagination" id="post-pagination" aria-label="Blog pagination"></nav>
                 </div>
-            </div>
+            </section>
 
-            <div class="modal" id="post-modal" aria-hidden="true" role="dialog">
+            <section class="modal" id="post-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="post-title">
                 <div class="modal-backdrop" id="modal-backdrop"></div>
-                <div class="modal-card window post-viewer">
+                <article class="modal-card window post-viewer">
                     <div class="window-header">
                         <div class="window-controls">
                             <div class="control red" id="modal-close-control" role="button" aria-label="Close blog modal" tabindex="0"></div>
@@ -72,11 +129,13 @@
                     <div class="window-content">
                         <div class="markdown-body" id="post-content"></div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </section>
+        </div>
+    </main>
 
-            <div class="dino-parade-shell" aria-hidden="true">
-                <div class="dino-parade window">
+    <footer class="dino-parade-shell">
+        <section class="dino-parade window" aria-label="Dino parade showcase">
                     <div class="window-header">
                         <div class="window-controls">
                             <div class="control red"></div>
@@ -100,13 +159,13 @@
                             </div>
                             <div class="dino-road"></div>
                             <div class="dino-ground"></div>
-                            <img class="dino-runner" data-dino="rainbow" style="--order: 0; --lane-offset: 0px;" src="dinos/dino-rainbow.png" alt="" loading="lazy">
-                            <img class="dino-runner" data-dino="red" style="--order: 1; --lane-offset: 0px;" src="dinos/dino-red.png" alt="" loading="lazy">
-                            <img class="dino-runner" data-dino="orange" style="--order: 2; --lane-offset: 0px;" src="dinos/dino-orange.png" alt="" loading="lazy">
-                            <img class="dino-runner" data-dino="yellow" style="--order: 3; --lane-offset: 0px;" src="dinos/dino-yellow.png" alt="" loading="lazy">
-                            <img class="dino-runner" data-dino="green" style="--order: 4; --lane-offset: 0px;" src="dinos/dino-green.png" alt="" loading="lazy">
-                            <img class="dino-runner" data-dino="blue" style="--order: 5; --lane-offset: 0px;" src="dinos/dino-blue.png" alt="" loading="lazy">
-                            <img class="dino-runner" data-dino="black" style="--order: 6; --lane-offset: 0px;" src="dinos/dino-black.png" alt="" loading="lazy">
+                            <img class="dino-runner" data-dino="rainbow" style="--order: 0; --lane-offset: 0px;" src="dinos/dino-rainbow.png" alt="Rainbow dino mascot running in the parade" loading="lazy">
+                            <img class="dino-runner" data-dino="red" style="--order: 1; --lane-offset: 0px;" src="dinos/dino-red.png" alt="Red dino mascot running in the parade" loading="lazy">
+                            <img class="dino-runner" data-dino="orange" style="--order: 2; --lane-offset: 0px;" src="dinos/dino-orange.png" alt="Orange dino mascot running in the parade" loading="lazy">
+                            <img class="dino-runner" data-dino="yellow" style="--order: 3; --lane-offset: 0px;" src="dinos/dino-yellow.png" alt="Yellow dino mascot running in the parade" loading="lazy">
+                            <img class="dino-runner" data-dino="green" style="--order: 4; --lane-offset: 0px;" src="dinos/dino-green.png" alt="Green dino mascot running in the parade" loading="lazy">
+                            <img class="dino-runner" data-dino="blue" style="--order: 5; --lane-offset: 0px;" src="dinos/dino-blue.png" alt="Blue dino mascot running in the parade" loading="lazy">
+                            <img class="dino-runner" data-dino="black" style="--order: 6; --lane-offset: 0px;" src="dinos/dino-black.png" alt="Black dino mascot running in the parade" loading="lazy">
                         </div>
                         <div class="dino-parade-cta">
                             <p class="muted-text">Meet the personalities behind the convoy.</p>
@@ -119,12 +178,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+        </section>
 
-            <div class="modal dino-game-modal" id="dino-game-modal" aria-hidden="true" role="dialog" aria-labelledby="dino-game-title">
+        <section class="modal dino-game-modal" id="dino-game-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="dino-game-title">
                 <div class="modal-backdrop" id="dino-game-backdrop"></div>
-                <div class="modal-card window dino-game-card" role="document">
+                <article class="modal-card window dino-game-card" role="document">
                     <div class="window-header">
                         <div class="window-controls">
                             <div class="control red" id="dino-game-close-control" role="button" aria-label="Close dino game modal" tabindex="0"></div>
@@ -173,10 +231,9 @@
                             <div class="dino-game-board" id="dino-game-board" aria-label="Dino catch game board"></div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </article>
+        </section>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
@@ -365,14 +422,19 @@
             }
 
             posts.forEach((post) => {
+                const article = document.createElement('article');
+                article.className = 'post-card';
+
                 const row = document.createElement('button');
                 row.type = 'button';
                 row.className = 'post-row';
                 row.setAttribute('data-slug', post.slug);
+                row.setAttribute('aria-label', `Read blog post ${post.title || post.slug}`);
                 row.innerHTML = `
                     <span class="row-view-icon" aria-hidden="true">
                         <i class="fa-regular fa-eye"></i>
                     </span>
+                    <h3 class=\"sr-only\">${post.title || post.slug}</h3>
                     <div class=\"row-title\">${post.title || post.slug}</div>
                     <div class=\"row-meta\">
                         <span>${post.date || 'Unknown date'}</span>
@@ -381,7 +443,8 @@
                     <p class=\"muted-text\">${post.summary || 'No summary provided.'}</p>
                 `;
                 row.addEventListener('click', () => loadPost(post));
-                listEl.appendChild(row);
+                article.appendChild(row);
+                listEl.appendChild(article);
             });
         }
 
@@ -513,9 +576,9 @@
 
         bootstrap();
     </script>
-    <script src="nav.js"></script>
-    <script src="parade.js"></script>
-    <script src="dino-game.js"></script>
+    <script src="nav.js" defer></script>
+    <script src="parade.js" defer></script>
+    <script src="dino-game.js" defer></script>
 </body>
 
 </html>

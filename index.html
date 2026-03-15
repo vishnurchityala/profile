@@ -4,21 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Vishnu Chityala</title>
+    <title>Vishnu Chityala | Software Developer Portfolio</title>
+    <meta name="description" content="Vishnu Chityala is an aspiring software developer building ML-backed products, backend systems, and frontend experiences with React, FastAPI, and Django REST.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vishnuchityala.in/">
     <link rel="icon" type="image/png" href="img/vc-pfp.png">
+    <meta property="og:title" content="Vishnu Chityala | Software Developer Portfolio">
+    <meta property="og:description" content="Portfolio of Vishnu Chityala featuring software engineering, AI, machine learning, backend systems, frontend delivery, projects, and experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vishnuchityala.in/">
+    <meta property="og:image" content="https://vishnuchityala.in/img/profile.jpg">
+    <meta property="og:site_name" content="Vishnu Chityala Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vishnu Chityala | Software Developer Portfolio">
+    <meta name="twitter:description" content="Portfolio of Vishnu Chityala featuring software engineering, AI, machine learning, backend systems, frontend delivery, projects, and experience.">
+    <meta name="twitter:image" content="https://vishnuchityala.in/img/profile.jpg">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://pbs.twimg.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        h2.section-title,
+        h3.project-name,
+        h3.job-title {
+            margin: 0;
+            font: inherit;
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Vishnu Chityala",
+            "url": "https://vishnuchityala.in/",
+            "image": "https://vishnuchityala.in/img/profile.jpg",
+            "jobTitle": "Software Developer",
+            "description": "Portfolio of Vishnu Chityala featuring software engineering, AI, machine learning, backend systems, frontend delivery, projects, and experience.",
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Bennett University"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/vishnuchityala/",
+                "https://github.com/vishnurchityala",
+                "https://leetcode.com/u/vishnurchityala/",
+                "https://www.codechef.com/users/vishnu1275"
+            ],
+            "knowsAbout": [
+                "Software Engineering",
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Backend Development",
+                "Frontend Development",
+                "FastAPI",
+                "React",
+                "Django REST"
+            ]
+        }
+    </script>
 </head>
 
 <body>
     <div class="sky-layer"></div>
     <div class="page-orb orb-left"></div>
     <div class="page-orb orb-right"></div>
-    <div class="nav-shell">
-        <nav class="nav-bar">
+    <header class="nav-shell">
+        <nav class="nav-bar" aria-label="Primary navigation">
             <a class="nav-brand" href="index.html">
                 <span class="brand-mark">
-                    <img src="img/vc-pfp.png" alt="Vishnu Chityala">
+                    <img src="img/vc-pfp.png" alt="Vishnu Chityala profile icon">
                 </span>
                 <span>Vishnu Chityala</span>
             </a>
@@ -33,11 +100,11 @@
                 <a class="nav-link" href="about-dinos.html">About Dino's</a>
             </div>
         </nav>
-    </div>
+    </header>
     <div class="page-stack">
     <div class="container">
         <aside class="sidebar">
-            <div class="window intro-window">
+            <section class="window intro-window" aria-labelledby="system-status-heading">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -47,6 +114,7 @@
                     <div class="window-title">SYSTEM.STATUS</div>
                 </div>
                 <div class="window-content">
+                    <h2 class="sr-only" id="system-status-heading">System status</h2>
                     <div class="status-badge">OPEN TO SOFTWARE AND AI ROLES</div>
                     <p class="muted-text">Shipping backend systems, ML experiments, and product-minded interfaces.</p>
                     <div class="stat-list">
@@ -64,9 +132,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="window" id="about">
+            <section class="window" id="about" aria-labelledby="socials-heading">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -76,6 +144,7 @@
                     <div class="window-title">SOCIALS</div>
                 </div>
                 <div class="window-content">
+                    <h2 class="sr-only" id="socials-heading">Social profiles</h2>
                     <div class="link-list">
                         <a class="external-link social-link" href="https://www.linkedin.com/in/vishnuchityala/" target="_blank" rel="noreferrer">
                             <span class="link-label"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></span>
@@ -91,9 +160,9 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="window" id="projects">
+            <section class="window" id="projects" aria-labelledby="languages-heading">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -103,6 +172,7 @@
                     <div class="window-title">LANGS</div>
                 </div>
                 <div class="window-content">
+                    <h2 class="sr-only" id="languages-heading">Languages</h2>
                     <div class="meter-list">
                         <div class="meter-row">
                             <span>PYTHON — 85%</span>
@@ -118,9 +188,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="window" id="skills">
+            <section class="window" id="skills" aria-labelledby="achievements-heading">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -130,6 +200,7 @@
                     <div class="window-title">ACHIEVEMENTS</div>
                 </div>
                 <div class="window-content">
+                    <h2 class="sr-only" id="achievements-heading">Achievements</h2>
                     <div class="achievement-list">
                         <p>Dean's List, top 5% of college</p>
                         <p>LeetCode rating: 1725</p>
@@ -137,11 +208,11 @@
                         <p>400+ algorithmic problems solved</p>
                     </div>
                 </div>
-            </div>
+            </section>
         </aside>
 
         <main class="main-content">
-            <div class="window">
+            <section class="window" aria-labelledby="about-me-heading">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -151,6 +222,7 @@
                     <div class="window-title">WWW.ABOUT.ME</div>
                 </div>
                 <div class="window-content hero-panel">
+                    <h2 class="sr-only" id="about-me-heading">About Vishnu Chityala</h2>
                     <div class="hero-copy">
                         <p class="eyebrow">B.TECH CSE (AI) STUDENT | NERD ALIVE</p>
                         <h1>Vishnu Chityala</h1>
@@ -185,7 +257,7 @@
                     </div>
                     <div class="hero-card">
                         <div class="avatar-frame">
-                            <img class="profile-photo" src="img/profile.jpg" alt="Portrait of Vishnu Chityala">
+                            <img class="profile-photo" src="img/profile.jpg" alt="Portrait of Vishnu Chityala, software developer" fetchpriority="high">
                         </div>
                         <div class="hero-meta">
                             <span>Backend</span>
@@ -194,9 +266,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="window">
+            <section class="window" aria-labelledby="projects-heading">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -206,11 +278,11 @@
                     <div class="window-title">PROJECTS.EXE</div>
                 </div>
                 <div class="window-content">
-                    <div class="section-title">TOP PROJECTS</div>
+                    <h2 class="section-title" id="projects-heading">TOP PROJECTS</h2>
 
-                    <div class="project-item">
+                    <article class="project-item">
                         <div class="project-header">
-                            <div class="project-name">WEARLYTIC</div>
+                            <h3 class="project-name">WEARLYTIC</h3>
                             <div class="date">SOLO PROJECT</div>
                         </div>
                         <p>Implemented a custom web scraping agent with task queues and high concurrency, then built a data ingestion microservice for batch processing and reliable downstream delivery.</p>
@@ -222,11 +294,11 @@
                         <div class="project-links">
                             <a class="external-link" href="https://wearlytic-d31q.vercel.app/" target="_blank" rel="noreferrer"><span class="link-label">Live Demo</span></a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-item">
+                    <article class="project-item">
                         <div class="project-header">
-                            <div class="project-name">CLI QA CHATBOT</div>
+                            <h3 class="project-name">CLI QA CHATBOT</h3>
                             <div class="date">SOLO PROJECT</div>
                         </div>
                         <p>Built a command-line interface around a QA agent with LangChain to support programming workflows, retrieval, and search-assisted answers from the terminal.</p>
@@ -237,11 +309,11 @@
                         <div class="project-links">
                             <a class="external-link" href="https://pypi.org/project/mavi-companion/" target="_blank" rel="noreferrer"><span class="link-label">PyPI Package</span></a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-item">
+                    <article class="project-item">
                         <div class="project-header">
-                            <div class="project-name">ENSEMBLE LEARNING</div>
+                            <h3 class="project-name">ENSEMBLE LEARNING</h3>
                             <div class="date">TEAM PROJECT</div>
                         </div>
                         <p>Improved medical image analysis by training 12 classification models and raising accuracy by 15% on the CBIS-DDSM dataset.</p>
@@ -252,11 +324,11 @@
                         <div class="project-links">
                             <a class="external-link" href="https://drive.google.com/file/d/14ZeYeXUDHRCA_GoOJdtV4kdSPezf0b11/view" target="_blank" rel="noreferrer"><span class="link-label">Project Report</span></a>
                         </div>
-                    </div>
+                    </article>
                 </div>
-            </div>
+            </section>
 
-            <div class="window">
+            <section class="window" aria-labelledby="skills-heading">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -266,29 +338,29 @@
                     <div class="window-title">TECH_STACK.LOG</div>
                 </div>
                 <div class="window-content">
-                    <div class="section-title">SKILLS</div>
+                    <h2 class="section-title" id="skills-heading">SKILLS</h2>
                     <div class="skill-grid">
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo"><span>PYTHON</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ logo"><span>C++</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo"><span>JAVA</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo"><span>REACT.JS</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI logo"><span>FASTAPI</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django logo"><span>DJANGO REST</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL database logo"><span>SQL</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB logo"><span>MONGODB</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase logo"><span>FIREBASE</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo"><span>GIT/GITHUB</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy logo"><span>NUMPY</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas logo"><span>PANDAS</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn logo"><span>SCIKIT-LEARN</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch logo"><span>PYTORCH</span></div>
-                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib logo"><span>MATPLOTLIB</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" loading="lazy"><span>PYTHON</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ logo" loading="lazy"><span>C++</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo" loading="lazy"><span>JAVA</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo" loading="lazy"><span>REACT.JS</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI logo" loading="lazy"><span>FASTAPI</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django logo" loading="lazy"><span>DJANGO REST</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL database logo" loading="lazy"><span>SQL</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB logo" loading="lazy"><span>MONGODB</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase logo" loading="lazy"><span>FIREBASE</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo" loading="lazy"><span>GIT/GITHUB</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy logo" loading="lazy"><span>NUMPY</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas logo" loading="lazy"><span>PANDAS</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn logo" loading="lazy"><span>SCIKIT-LEARN</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch logo" loading="lazy"><span>PYTORCH</span></div>
+                        <div class="skill-card"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib logo" loading="lazy"><span>MATPLOTLIB</span></div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="content-grid">
-                <div class="window" id="experience">
+            <section class="content-grid" aria-label="Experience and education">
+                <section class="window" id="experience" aria-labelledby="experience-heading">
                     <div class="window-header">
                         <div class="window-controls">
                             <div class="control red"></div>
@@ -298,12 +370,12 @@
                         <div class="window-title">WORK-EXPERIENCE.DB</div>
                     </div>
                     <div class="window-content">
-                        <div class="section-title">ROLES</div>
-                        <div class="xp-item">
+                        <h2 class="section-title" id="experience-heading">ROLES</h2>
+                        <article class="xp-item">
                             <div class="xp-header">
                                 <div class="job-title-wrap">
                                     <img class="company-icon" src="https://pbs.twimg.com/profile_images/1989327428058251264/RX7M_JYl_400x400.jpg" alt="Capmint company icon" loading="lazy">
-                                    <div class="job-title">AUTOMATION INTERN, CAPMINT</div>
+                                    <h3 class="job-title">AUTOMATION INTERN, CAPMINT</h3>
                                 </div>
                                 <div class="date">FEB 2026 - PRESENT</div>
                             </div>
@@ -314,46 +386,46 @@
                             <div class="project-links">
                                 <a class="external-link" href="https://loop-replay.vercel.app/landing" target="_blank" rel="noreferrer"><span class="link-label">Loop Replay Demo</span></a>
                             </div>
-                        </div>
+                        </article>
                     </div>
-                </div>
+                </section>
 
-                <div class="window" id="education">
+                <section class="window" id="education" aria-labelledby="education-heading">
                     <div class="window-header">
                         <div class="window-controls">
                             <div class="control red"></div>
                             <div class="control yellow"></div>
                             <div class="control green"></div>
                         </div>
-                    <div class="window-title">EDUCATION.SYS</div>
-                </div>
-                <div class="window-content">
-                    <div class="section-title">ACADEMIA</div>
-                    <div class="xp-item">
-                        <div class="xp-header">
-                            <div class="job-title">R&amp;D HEAD, ALTREALITY CLUB</div>
-                            <div class="date">OCT 2024 - MAR 2025</div>
+                        <div class="window-title">EDUCATION.SYS</div>
+                    </div>
+                    <div class="window-content">
+                        <h2 class="section-title" id="education-heading">ACADEMIA</h2>
+                        <article class="xp-item">
+                            <div class="xp-header">
+                                <h3 class="job-title">R&amp;D HEAD, ALTREALITY CLUB</h3>
+                                <div class="date">OCT 2024 - MAR 2025</div>
+                            </div>
+                            <p>Bennett University. Launched AR-Cade for 250+ players and led the club’s technical initiatives including seat-booking and hackathon delivery.</p>
+                            <div class="project-links">
+                                <a class="external-link" href="https://arcade-bu.vercel.app/" target="_blank" rel="noreferrer"><span class="link-label">AR-Cade Demo</span></a>
+                            </div>
+                        </article>
+                        <div class="timeline">
+                            <div class="timeline-dot"></div>
+                            <p><strong>B.TECH CSE (AI)</strong><br>Bennett University | 2023 - 2027<br>CGPA: 9.4/10.0</p>
                         </div>
-                        <p>Bennett University. Launched AR-Cade for 250+ players and led the club’s technical initiatives including seat-booking and hackathon delivery.</p>
-                        <div class="project-links">
-                            <a class="external-link" href="https://arcade-bu.vercel.app/" target="_blank" rel="noreferrer"><span class="link-label">AR-Cade Demo</span></a>
+                        <div class="timeline">
+                            <div class="timeline-dot"></div>
+                            <p><strong>10-12TH STANDARD</strong><br>LP Savani International School | 2020 - 2022</p>
                         </div>
                     </div>
-                    <div class="timeline">
-                        <div class="timeline-dot"></div>
-                        <p><strong>B.TECH CSE (AI)</strong><br>Bennett University | 2023 - 2027<br>CGPA: 9.4/10.0</p>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-dot"></div>
-                        <p><strong>10-12TH STANDARD</strong><br>LP Savani International School | 2020 - 2022</p>
-                    </div>
-                    </div>
-                </div>
-            </div>
+                </section>
+            </section>
         </main>
     </div>
-    <div class="dino-parade-shell" aria-hidden="true">
-            <div class="dino-parade window">
+    <footer class="dino-parade-shell">
+            <section class="dino-parade window" aria-label="Dino parade showcase">
                 <div class="window-header">
                     <div class="window-controls">
                         <div class="control red"></div>
@@ -377,13 +449,13 @@
                         </div>
                         <div class="dino-road"></div>
                         <div class="dino-ground"></div>
-                        <img class="dino-runner" data-dino="rainbow" style="--order: 0; --lane-offset: 0px;" src="dinos/dino-rainbow.png" alt="" loading="lazy">
-                        <img class="dino-runner" data-dino="red" style="--order: 1; --lane-offset: 0px;" src="dinos/dino-red.png" alt="" loading="lazy">
-                        <img class="dino-runner" data-dino="orange" style="--order: 2; --lane-offset: 0px;" src="dinos/dino-orange.png" alt="" loading="lazy">
-                        <img class="dino-runner" data-dino="yellow" style="--order: 3; --lane-offset: 0px;" src="dinos/dino-yellow.png" alt="" loading="lazy">
-                        <img class="dino-runner" data-dino="green" style="--order: 4; --lane-offset: 0px;" src="dinos/dino-green.png" alt="" loading="lazy">
-                        <img class="dino-runner" data-dino="blue" style="--order: 5; --lane-offset: 0px;" src="dinos/dino-blue.png" alt="" loading="lazy">
-                        <img class="dino-runner" data-dino="black" style="--order: 6; --lane-offset: 0px;" src="dinos/dino-black.png" alt="" loading="lazy">
+                        <img class="dino-runner" data-dino="rainbow" style="--order: 0; --lane-offset: 0px;" src="dinos/dino-rainbow.png" alt="Rainbow dino mascot running in the parade" loading="lazy">
+                        <img class="dino-runner" data-dino="red" style="--order: 1; --lane-offset: 0px;" src="dinos/dino-red.png" alt="Red dino mascot running in the parade" loading="lazy">
+                        <img class="dino-runner" data-dino="orange" style="--order: 2; --lane-offset: 0px;" src="dinos/dino-orange.png" alt="Orange dino mascot running in the parade" loading="lazy">
+                        <img class="dino-runner" data-dino="yellow" style="--order: 3; --lane-offset: 0px;" src="dinos/dino-yellow.png" alt="Yellow dino mascot running in the parade" loading="lazy">
+                        <img class="dino-runner" data-dino="green" style="--order: 4; --lane-offset: 0px;" src="dinos/dino-green.png" alt="Green dino mascot running in the parade" loading="lazy">
+                        <img class="dino-runner" data-dino="blue" style="--order: 5; --lane-offset: 0px;" src="dinos/dino-blue.png" alt="Blue dino mascot running in the parade" loading="lazy">
+                        <img class="dino-runner" data-dino="black" style="--order: 6; --lane-offset: 0px;" src="dinos/dino-black.png" alt="Black dino mascot running in the parade" loading="lazy">
                     </div>
                     <div class="dino-parade-cta">
                         <p class="muted-text">Meet the personalities behind the convoy.</p>
@@ -396,12 +468,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-    </div>
+            </section>
+    </footer>
 
-    <div class="modal dino-game-modal" id="dino-game-modal" aria-hidden="true" role="dialog" aria-labelledby="dino-game-title">
+    <section class="modal dino-game-modal" id="dino-game-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="dino-game-title">
         <div class="modal-backdrop" id="dino-game-backdrop"></div>
-        <div class="modal-card window dino-game-card" role="document">
+        <article class="modal-card window dino-game-card" role="document">
             <div class="window-header">
                 <div class="window-controls">
                     <div class="control red" id="dino-game-close-control" role="button" aria-label="Close dino game modal" tabindex="0"></div>
@@ -450,8 +522,8 @@
                     <div class="dino-game-board" id="dino-game-board" aria-label="Dino catch game board"></div>
                 </div>
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
     </div>
     <script>
         document.querySelectorAll('.copy-btn').forEach((btn) => {
@@ -468,9 +540,9 @@
             });
         });
     </script>
-    <script src="nav.js"></script>
-    <script src="parade.js"></script>
-    <script src="dino-game.js"></script>
+    <script src="nav.js" defer></script>
+    <script src="parade.js" defer></script>
+    <script src="dino-game.js" defer></script>
 </body>
 
 </html>
