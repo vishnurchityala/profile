@@ -725,6 +725,11 @@ a {
   margin: 0 auto;
 }
 
+.blogs-page .dino-parade-shell {
+  width: min(1200px, 100%);
+  margin: 32px auto 0;
+}
+
 .dino-parade-shell {
   width: 100%;
   margin: 32px 0 0;
@@ -1856,6 +1861,10 @@ a {
 
 .modal-open {
   overflow: hidden;
+}
+
+.modal-open .dino-parade-shell {
+  visibility: hidden;
 }
 
 .sidebar {
