@@ -503,6 +503,22 @@ body {
   border-collapse: collapse;
 }
 
+.markdown-body img {
+  display: block;
+  width: min(100%, 860px);
+  max-width: 100%;
+  height: auto;
+  margin: 8px auto 4px;
+  border: 3px solid var(--border-color);
+  background: linear-gradient(180deg, #fffdf8 0%, #f4e8da 100%);
+  box-shadow: inset -4px -4px 0 rgba(42, 29, 25, 0.08), inset 4px 4px 0 rgba(255, 255, 255, 0.2);
+}
+
+.markdown-body p > img:only-child {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
 .markdown-body th,
 .markdown-body td {
   border: 2px solid rgba(42, 29, 25, 0.2);
