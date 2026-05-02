@@ -1,5 +1,5 @@
 (function () {
-  const tracks = Array.from(document.querySelectorAll('.dino-parade-track'));
+  const tracks = Array.from(document.querySelectorAll(".dino-parade-track"));
   if (!tracks.length) {
     return;
   }
@@ -10,12 +10,14 @@
   }
 
   function createScene(track) {
-    const dinos = Array.from(track.querySelectorAll('.dino-runner')).map((el, index) => ({
-      el,
-      x: 0,
-      phaseOffset: index * 0.58,
-    }));
-    const car = track.querySelector('.parade-car');
+    const dinos = Array.from(track.querySelectorAll(".dino-runner")).map(
+      (el, index) => ({
+        el,
+        x: 0,
+        phaseOffset: index * 0.58,
+      }),
+    );
+    const car = track.querySelector(".parade-car");
 
     if (!dinos.length || !car) {
       return null;
@@ -25,10 +27,10 @@
       track,
       dinos,
       activeDinos: [],
-      activeSignature: '',
+      activeSignature: "",
       car,
       dir: 1,
-      phase: 'approach',
+      phase: "approach",
       pauseLeft: 0,
       carApproachDir: -1,
       carFacing: -1,
@@ -48,15 +50,24 @@
     function syncMetrics(keepProgress) {
       const styles = getComputedStyle(track);
       const nextTrackWidth = track.clientWidth || 1;
-      const nextDinoSize = px(styles.getPropertyValue('--dino-size'), scene.dinoSize);
-      const nextGap = px(styles.getPropertyValue('--dino-gap'), scene.dinoGap);
-      const nextCarWidth = car.offsetWidth || px(styles.getPropertyValue('--parade-car-width'), scene.carWidth);
-      const widthRatio = scene.trackWidth ? nextTrackWidth / scene.trackWidth : 1;
-      const nextActiveDinos = dinos.filter((dino) => getComputedStyle(dino.el).display !== 'none');
+      const nextDinoSize = px(
+        styles.getPropertyValue("--dino-size"),
+        scene.dinoSize,
+      );
+      const nextGap = px(styles.getPropertyValue("--dino-gap"), scene.dinoGap);
+      const nextCarWidth =
+        car.offsetWidth ||
+        px(styles.getPropertyValue("--parade-car-width"), scene.carWidth);
+      const widthRatio = scene.trackWidth
+        ? nextTrackWidth / scene.trackWidth
+        : 1;
+      const nextActiveDinos = dinos.filter(
+        (dino) => getComputedStyle(dino.el).display !== "none",
+      );
       const activeDinos = nextActiveDinos.length ? nextActiveDinos : dinos;
       const nextActiveSignature = activeDinos
-        .map((dino) => dino.el.dataset.dino || '')
-        .join('|');
+        .map((dino) => dino.el.dataset.dino || "")
+        .join("|");
       const activeChanged = nextActiveSignature !== scene.activeSignature;
 
       scene.trackWidth = nextTrackWidth;
@@ -72,7 +83,10 @@
 
       if (!scene.initialized || activeChanged) {
         const convoySpan = nextDinoSize + nextGap * (activeDinos.length - 1);
-        const leftPadding = Math.max(12, Math.min(30, (nextTrackWidth - convoySpan) * 0.16));
+        const leftPadding = Math.max(
+          12,
+          Math.min(30, (nextTrackWidth - convoySpan) * 0.16),
+        );
 
         activeDinos.forEach((dino, index) => {
           dino.x = leftPadding + (activeDinos.length - 1 - index) * nextGap;
@@ -84,10 +98,10 @@
           }
         });
 
-        scene.phase = 'approach';
+        scene.phase = "approach";
         scene.pauseLeft = 0;
         scene.honkLeft = 0;
-        scene.car.classList.remove('is-honking');
+        scene.car.classList.remove("is-honking");
         resetCar(scene);
         scene.initialized = true;
         return;
@@ -102,15 +116,15 @@
     }
 
     scene.syncMetrics = syncMetrics;
-    track.classList.add('is-scripted');
+    track.classList.add("is-scripted");
     syncMetrics(false);
 
-    if (typeof ResizeObserver !== 'undefined') {
+    if (typeof ResizeObserver !== "undefined") {
       const observer = new ResizeObserver(() => syncMetrics(true));
       observer.observe(track);
       scene.resizeObserver = observer;
     } else {
-      window.addEventListener('resize', () => syncMetrics(true));
+      window.addEventListener("resize", () => syncMetrics(true));
     }
 
     return scene;
@@ -119,10 +133,11 @@
   function resetCar(scene) {
     scene.carApproachDir = -scene.dir;
     scene.carFacing = scene.carApproachDir;
-    scene.carX = scene.carApproachDir === -1
-      ? scene.trackWidth + 32
-      : -scene.carWidth - 32;
-    scene.phase = 'approach';
+    scene.carX =
+      scene.carApproachDir === -1
+        ? scene.trackWidth + 32
+        : -scene.carWidth - 32;
+    scene.phase = "approach";
   }
 
   function carIsOut(scene) {
@@ -135,36 +150,38 @@
 
   function triggerHonk(scene) {
     scene.honkLeft = 0.34;
-    scene.car.classList.remove('is-honking');
+    scene.car.classList.remove("is-honking");
     void scene.car.offsetWidth;
-    scene.car.classList.add('is-honking');
+    scene.car.classList.add("is-honking");
   }
 
   function updateScene(scene, dt, seconds) {
-    const activeDinos = scene.activeDinos.length ? scene.activeDinos : scene.dinos;
+    const activeDinos = scene.activeDinos.length
+      ? scene.activeDinos
+      : scene.dinos;
 
     if (scene.honkLeft > 0) {
       scene.honkLeft -= dt;
       if (scene.honkLeft <= 0) {
         scene.honkLeft = 0;
-        scene.car.classList.remove('is-honking');
+        scene.car.classList.remove("is-honking");
       }
     }
 
-    if (scene.phase === 'approach') {
+    if (scene.phase === "approach") {
       activeDinos.forEach((dino) => {
         dino.x += scene.dinoSpeed * dt * scene.dir;
       });
 
       scene.carX += scene.carSpeed * dt * scene.carApproachDir;
 
-      const leader = scene.dir === 1
-        ? activeDinos[0]
-        : activeDinos[activeDinos.length - 1];
+      const leader =
+        scene.dir === 1 ? activeDinos[0] : activeDinos[activeDinos.length - 1];
 
-      const distance = scene.dir === 1
-        ? scene.carX - (leader.x + scene.dinoSize)
-        : leader.x - (scene.carX + scene.carWidth);
+      const distance =
+        scene.dir === 1
+          ? scene.carX - (leader.x + scene.dinoSize)
+          : leader.x - (scene.carX + scene.carWidth);
 
       if (distance <= scene.stopGap) {
         if (scene.dir === 1) {
@@ -173,17 +190,17 @@
           scene.carX = leader.x - scene.stopGap - scene.carWidth;
         }
 
-        scene.phase = 'pause';
+        scene.phase = "pause";
         scene.pauseLeft = 0.68;
         triggerHonk(scene);
       }
-    } else if (scene.phase === 'pause') {
+    } else if (scene.phase === "pause") {
       scene.pauseLeft -= dt;
       if (scene.pauseLeft <= 0) {
-        scene.phase = 'reverse';
+        scene.phase = "reverse";
       }
-    } else if (scene.phase === 'reverse') {
-      scene.carX += scene.carReverseSpeed * dt * (-scene.carApproachDir);
+    } else if (scene.phase === "reverse") {
+      scene.carX += scene.carReverseSpeed * dt * -scene.carApproachDir;
 
       if (carIsOut(scene)) {
         scene.dir *= -1;
@@ -191,7 +208,7 @@
       }
     }
 
-    const dinosAreMoving = scene.phase === 'approach';
+    const dinosAreMoving = scene.phase === "approach";
     const dinoBounceAmp = dinosAreMoving ? 5 : 0;
     const dinoTiltAmp = dinosAreMoving ? 4.5 : 0;
 
@@ -200,18 +217,28 @@
       const bounce = Math.sin(wave) * dinoBounceAmp;
       const tilt = Math.sin(wave) * dinoTiltAmp;
 
-      dino.el.style.left = dino.x + 'px';
+      dino.el.style.left = dino.x + "px";
       dino.el.style.transform =
-        'translate3d(0, ' + bounce.toFixed(2) + 'px, 0) ' +
-        'scaleX(' + scene.dir + ') ' +
-        'rotate(' + tilt.toFixed(2) + 'deg)';
+        "translate3d(0, " +
+        bounce.toFixed(2) +
+        "px, 0) " +
+        "scaleX(" +
+        scene.dir +
+        ") " +
+        "rotate(" +
+        tilt.toFixed(2) +
+        "deg)";
     });
 
-    const carBob = scene.phase === 'pause' ? 0 : Math.sin(seconds * 7) * 1.2;
-    scene.car.style.left = scene.carX + 'px';
+    const carBob = scene.phase === "pause" ? 0 : Math.sin(seconds * 7) * 1.2;
+    scene.car.style.left = scene.carX + "px";
     scene.car.style.transform =
-      'translate3d(0, ' + carBob.toFixed(2) + 'px, 0) ' +
-      'scaleX(' + scene.carFacing + ')';
+      "translate3d(0, " +
+      carBob.toFixed(2) +
+      "px, 0) " +
+      "scaleX(" +
+      scene.carFacing +
+      ")";
   }
 
   const scenes = tracks.map(createScene).filter(Boolean);
@@ -231,4 +258,4 @@
   }
 
   requestAnimationFrame(tick);
-}());
+})();

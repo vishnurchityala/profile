@@ -1,585 +1,767 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Blogs by Vishnu Chityala | Software, AI, and Development Notes</title>
-    <meta name="description" content="Read technical blogs by Vishnu Chityala on software engineering, AI, machine learning, backend systems, frontend development, and developer experiments.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://vishnuchityala.in/blogs.html">
-    <link rel="icon" type="image/png" href="img/vc-pfp.png">
-    <meta property="og:title" content="Technical Blogs by Vishnu Chityala">
-    <meta property="og:description" content="Technical writing and experiments on software engineering, AI, backend systems, frontend work, and developer learning notes.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vishnuchityala.in/blogs.html">
-    <meta property="og:image" content="https://vishnuchityala.in/img/profile.jpg">
-    <meta property="og:site_name" content="Vishnu Chityala Portfolio">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Technical Blogs by Vishnu Chityala">
-    <meta name="twitter:description" content="Technical writing and experiments on software engineering, AI, backend systems, frontend work, and developer learning notes.">
-    <meta name="twitter:image" content="https://vishnuchityala.in/img/profile.jpg">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Technical Blogs by Vishnu Chityala | Software, AI, and Development Notes
+    </title>
+    <meta
+      name="description"
+      content="Read technical blogs by Vishnu Chityala on software engineering, AI, machine learning, backend systems, frontend development, and developer experiments."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://vishnuchityala.in/blogs.html" />
+    <link rel="icon" type="image/png" href="img/vc-pfp.png" />
+    <meta property="og:title" content="Technical Blogs by Vishnu Chityala" />
+    <meta
+      property="og:description"
+      content="Technical writing and experiments on software engineering, AI, backend systems, frontend work, and developer learning notes."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vishnuchityala.in/blogs.html" />
+    <meta
+      property="og:image"
+      content="https://vishnuchityala.in/img/profile.jpg"
+    />
+    <meta property="og:site_name" content="Vishnu Chityala Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Technical Blogs by Vishnu Chityala" />
+    <meta
+      name="twitter:description"
+      content="Technical writing and experiments on software engineering, AI, backend systems, frontend work, and developer learning notes."
+    />
+    <meta
+      name="twitter:image"
+      content="https://vishnuchityala.in/img/profile.jpg"
+    />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
     <style>
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
     </style>
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Vishnu Chityala",
-            "url": "https://vishnuchityala.in/",
-            "image": "https://vishnuchityala.in/img/profile.jpg",
-            "jobTitle": "Software Developer",
-            "description": "Developer portfolio and technical blog for Vishnu Chityala covering software engineering, AI, machine learning, backend systems, and frontend development.",
-            "sameAs": [
-                "https://www.linkedin.com/in/vishnuchityala/",
-                "https://github.com/vishnurchityala",
-                "https://leetcode.com/u/vishnurchityala/",
-                "https://www.codechef.com/users/vishnu1275"
-            ],
-            "knowsAbout": [
-                "Software Engineering",
-                "Artificial Intelligence",
-                "Machine Learning",
-                "Backend Development",
-                "Frontend Development",
-                "FastAPI",
-                "React",
-                "Django REST"
-            ]
-        }
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vishnu Chityala",
+        "url": "https://vishnuchityala.in/",
+        "image": "https://vishnuchityala.in/img/profile.jpg",
+        "jobTitle": "Software Developer",
+        "description": "Developer portfolio and technical blog for Vishnu Chityala covering software engineering, AI, machine learning, backend systems, and frontend development.",
+        "sameAs": [
+          "https://www.linkedin.com/in/vishnuchityala/",
+          "https://github.com/vishnurchityala",
+          "https://leetcode.com/u/vishnurchityala/",
+          "https://www.codechef.com/users/vishnu1275"
+        ],
+        "knowsAbout": [
+          "Software Engineering",
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Backend Development",
+          "Frontend Development",
+          "FastAPI",
+          "React",
+          "Django REST"
+        ]
+      }
     </script>
-</head>
+  </head>
 
-<body class="blogs-page">
+  <body class="blogs-page">
     <div class="sky-layer"></div>
     <div class="page-orb orb-left"></div>
     <div class="page-orb orb-right"></div>
     <header class="nav-shell">
-        <nav class="nav-bar" aria-label="Primary navigation">
-            <a class="nav-brand" href="index.html">
-                <span class="brand-mark">
-                    <img src="img/vc-pfp.png" alt="Vishnu Chityala profile icon">
-                </span>
-                <span>Vishnu Chityala</span>
-            </a>
-            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav-links">
-                <span class="nav-toggle-line"></span>
-                <span class="nav-toggle-line"></span>
-                <span class="nav-toggle-line"></span>
-            </button>
-            <div class="nav-links" id="site-nav-links">
-                <a class="nav-link" href="index.html">About</a>
-                <a class="nav-link" href="projects.html">Projects</a>
-                <a class="nav-link active" href="blogs.html">Blogs</a>
-                <a class="nav-link" href="about-dinos.html">About Dino's</a>
-            </div>
-        </nav>
+      <nav class="nav-bar" aria-label="Primary navigation">
+        <a class="nav-brand" href="index.html">
+          <span class="brand-mark">
+            <img src="img/vc-pfp.png" alt="Vishnu Chityala profile icon" />
+          </span>
+          <span>Vishnu Chityala</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="site-nav-links"
+        >
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+        <div class="nav-links" id="site-nav-links">
+          <a class="nav-link" href="index.html">About</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link active" href="blogs.html">Blogs</a>
+          <a class="nav-link" href="about-dinos.html">About Dino's</a>
+        </div>
+      </nav>
     </header>
     <main class="page-stack" id="main-content">
-        <h1 class="sr-only">Technical blogs by Vishnu Chityala</h1>
-        <div class="container">
-            <section class="window" aria-labelledby="blogs-section-heading">
-                <div class="window-header">
-                    <div class="window-controls">
-                        <div class="control red"></div>
-                        <div class="control yellow"></div>
-                        <div class="control green"></div>
-                    </div>
-                    <div class="window-title">POSTS.IDX</div>
-                </div>
-                <div class="window-content">
-                    <h2 class="sr-only" id="blogs-section-heading">Blog post directory</h2>
-                    <div class="status-chip" aria-live="polite">
-                        Few of my Nerdy Blogs
-                    </div>
-                    <section class="post-list-single" id="post-list" aria-label="Blog posts list"></section>
-                    <nav class="post-pagination" id="post-pagination" aria-label="Blog pagination"></nav>
-                </div>
-            </section>
+      <h1 class="sr-only">Technical blogs by Vishnu Chityala</h1>
+      <div class="container">
+        <section class="window" aria-labelledby="blogs-section-heading">
+          <div class="window-header">
+            <div class="window-controls">
+              <div class="control red"></div>
+              <div class="control yellow"></div>
+              <div class="control green"></div>
+            </div>
+            <div class="window-title">POSTS.IDX</div>
+          </div>
+          <div class="window-content">
+            <h2 class="sr-only" id="blogs-section-heading">
+              Blog post directory
+            </h2>
+            <div class="status-chip" aria-live="polite">
+              Few of my Nerdy Blogs
+            </div>
+            <section
+              class="post-list-single"
+              id="post-list"
+              aria-label="Blog posts list"
+            ></section>
+            <nav
+              class="post-pagination"
+              id="post-pagination"
+              aria-label="Blog pagination"
+            ></nav>
+          </div>
+        </section>
 
-            <section class="modal" id="post-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="post-title">
-                <div class="modal-backdrop" id="modal-backdrop"></div>
-                <article class="modal-card window post-viewer">
-                    <div class="window-header">
-                        <div class="window-controls">
-                            <div class="control red" id="modal-close-control" role="button" aria-label="Close blog modal" tabindex="0"></div>
-                            <div class="control yellow"></div>
-                            <div class="control green"></div>
-                        </div>
-                        <div class="window-title" id="post-title">POST</div>
-                        <button class="modal-close-btn" id="modal-close-btn" type="button" aria-label="Close blog modal">
-                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                            <span>Close</span>
-                        </button>
-                    </div>
-                    <div class="window-content">
-                        <div class="markdown-body" id="post-content"></div>
-                    </div>
-                </article>
-            </section>
-        </div>
+        <section
+          class="modal"
+          id="post-modal"
+          aria-hidden="true"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="post-title"
+        >
+          <div class="modal-backdrop" id="modal-backdrop"></div>
+          <article class="modal-card window post-viewer">
+            <div class="window-header">
+              <div class="window-controls">
+                <div
+                  class="control red"
+                  id="modal-close-control"
+                  role="button"
+                  aria-label="Close blog modal"
+                  tabindex="0"
+                ></div>
+                <div class="control yellow"></div>
+                <div class="control green"></div>
+              </div>
+              <div class="window-title" id="post-title">POST</div>
+              <button
+                class="modal-close-btn"
+                id="modal-close-btn"
+                type="button"
+                aria-label="Close blog modal"
+              >
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                <span>Close</span>
+              </button>
+            </div>
+            <div class="window-content">
+              <div class="markdown-body" id="post-content"></div>
+            </div>
+          </article>
+        </section>
+      </div>
     </main>
 
     <footer class="dino-parade-shell">
-        <section class="dino-parade window" aria-label="Dino parade showcase">
-            <div class="window-header">
-                <div class="window-controls">
-                    <div class="control red"></div>
-                    <div class="control yellow"></div>
-                    <div class="control green"></div>
-                </div>
-                <div class="window-title">DINO.PARADE</div>
+      <section class="dino-parade window" aria-label="Dino parade showcase">
+        <div class="window-header">
+          <div class="window-controls">
+            <div class="control red"></div>
+            <div class="control yellow"></div>
+            <div class="control green"></div>
+          </div>
+          <div class="window-title">DINO.PARADE</div>
+        </div>
+        <div class="window-content">
+          <div class="dino-parade-track">
+            <div
+              class="dino-prop dino-traffic-light dino-traffic-light-a"
+            ></div>
+            <div
+              class="dino-prop dino-traffic-light dino-traffic-light-b"
+            ></div>
+            <div
+              class="dino-prop dino-traffic-light dino-traffic-light-c"
+            ></div>
+            <div class="parade-car" aria-hidden="true">
+              <span class="parade-car-body"></span>
+              <span class="parade-car-roof"></span>
+              <span class="parade-car-window"></span>
+              <span class="parade-car-light"></span>
+              <span class="parade-car-wheel parade-car-wheel-back"></span>
+              <span class="parade-car-wheel parade-car-wheel-front"></span>
             </div>
-            <div class="window-content">
-                <div class="dino-parade-track">
-                    <div class="dino-prop dino-traffic-light dino-traffic-light-a"></div>
-                    <div class="dino-prop dino-traffic-light dino-traffic-light-b"></div>
-                    <div class="dino-prop dino-traffic-light dino-traffic-light-c"></div>
-                    <div class="parade-car" aria-hidden="true">
-                        <span class="parade-car-body"></span>
-                        <span class="parade-car-roof"></span>
-                        <span class="parade-car-window"></span>
-                        <span class="parade-car-light"></span>
-                        <span class="parade-car-wheel parade-car-wheel-back"></span>
-                        <span class="parade-car-wheel parade-car-wheel-front"></span>
-                    </div>
-                    <div class="dino-road"></div>
-                    <div class="dino-ground"></div>
-                    <img class="dino-runner" data-dino="rainbow" style="--order: 0; --lane-offset: 0px;" src="dinos/dino-rainbow.png" alt="Rainbow dino mascot running in the parade" loading="lazy">
-                    <img class="dino-runner" data-dino="red" style="--order: 1; --lane-offset: 0px;" src="dinos/dino-red.png" alt="Red dino mascot running in the parade" loading="lazy">
-                    <img class="dino-runner" data-dino="orange" style="--order: 2; --lane-offset: 0px;" src="dinos/dino-orange.png" alt="Orange dino mascot running in the parade" loading="lazy">
-                    <img class="dino-runner" data-dino="yellow" style="--order: 3; --lane-offset: 0px;" src="dinos/dino-yellow.png" alt="Yellow dino mascot running in the parade" loading="lazy">
-                    <img class="dino-runner" data-dino="green" style="--order: 4; --lane-offset: 0px;" src="dinos/dino-green.png" alt="Green dino mascot running in the parade" loading="lazy">
-                    <img class="dino-runner" data-dino="blue" style="--order: 5; --lane-offset: 0px;" src="dinos/dino-blue.png" alt="Blue dino mascot running in the parade" loading="lazy">
-                    <img class="dino-runner" data-dino="black" style="--order: 6; --lane-offset: 0px;" src="dinos/dino-black.png" alt="Black dino mascot running in the parade" loading="lazy">
-                </div>
-                <div class="dino-parade-cta">
-                    <p class="muted-text">Meet the personalities behind the convoy.</p>
-                    <div class="dino-parade-actions">
-                        <button class="parade-game-link" id="open-dino-game" type="button">
-                            <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
-                            <span>PLAY WITH DINO</span>
-                        </button>
-                        <a class="parade-crew-link" href="about-dinos.html">ABOUT DINO'S</a>
-                    </div>
-                </div>
+            <div class="dino-road"></div>
+            <div class="dino-ground"></div>
+            <img
+              class="dino-runner"
+              data-dino="rainbow"
+              style="--order: 0; --lane-offset: 0px"
+              src="dinos/dino-rainbow.png"
+              alt="Rainbow dino mascot running in the parade"
+              loading="lazy"
+            />
+            <img
+              class="dino-runner"
+              data-dino="red"
+              style="--order: 1; --lane-offset: 0px"
+              src="dinos/dino-red.png"
+              alt="Red dino mascot running in the parade"
+              loading="lazy"
+            />
+            <img
+              class="dino-runner"
+              data-dino="orange"
+              style="--order: 2; --lane-offset: 0px"
+              src="dinos/dino-orange.png"
+              alt="Orange dino mascot running in the parade"
+              loading="lazy"
+            />
+            <img
+              class="dino-runner"
+              data-dino="yellow"
+              style="--order: 3; --lane-offset: 0px"
+              src="dinos/dino-yellow.png"
+              alt="Yellow dino mascot running in the parade"
+              loading="lazy"
+            />
+            <img
+              class="dino-runner"
+              data-dino="green"
+              style="--order: 4; --lane-offset: 0px"
+              src="dinos/dino-green.png"
+              alt="Green dino mascot running in the parade"
+              loading="lazy"
+            />
+            <img
+              class="dino-runner"
+              data-dino="blue"
+              style="--order: 5; --lane-offset: 0px"
+              src="dinos/dino-blue.png"
+              alt="Blue dino mascot running in the parade"
+              loading="lazy"
+            />
+            <img
+              class="dino-runner"
+              data-dino="black"
+              style="--order: 6; --lane-offset: 0px"
+              src="dinos/dino-black.png"
+              alt="Black dino mascot running in the parade"
+              loading="lazy"
+            />
+          </div>
+          <div class="dino-parade-cta">
+            <p class="muted-text">Meet the personalities behind the convoy.</p>
+            <div class="dino-parade-actions">
+              <button
+                class="parade-game-link"
+                id="open-dino-game"
+                type="button"
+              >
+                <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                <span>PLAY WITH DINO</span>
+              </button>
+              <a class="parade-crew-link" href="about-dinos.html"
+                >ABOUT DINO'S</a
+              >
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </footer>
 
-    <section class="modal dino-game-modal" id="dino-game-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="dino-game-title">
-        <div class="modal-backdrop" id="dino-game-backdrop"></div>
-        <article class="modal-card window dino-game-card" role="document">
-            <div class="window-header">
-                <div class="window-controls">
-                    <div class="control red" id="dino-game-close-control" role="button" aria-label="Close dino game modal" tabindex="0"></div>
-                    <div class="control yellow"></div>
-                    <div class="control green"></div>
-                </div>
-                <div class="window-title" id="dino-game-title">DINO.CATCH.EXE</div>
-                <button class="modal-close-btn" id="dino-game-close-btn" type="button" aria-label="Close dino game modal">
-                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                    <span>Close</span>
-                </button>
+    <section
+      class="modal dino-game-modal"
+      id="dino-game-modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="dino-game-title"
+    >
+      <div class="modal-backdrop" id="dino-game-backdrop"></div>
+      <article class="modal-card window dino-game-card" role="document">
+        <div class="window-header">
+          <div class="window-controls">
+            <div
+              class="control red"
+              id="dino-game-close-control"
+              role="button"
+              aria-label="Close dino game modal"
+              tabindex="0"
+            ></div>
+            <div class="control yellow"></div>
+            <div class="control green"></div>
+          </div>
+          <div class="window-title" id="dino-game-title">DINO.CATCH.EXE</div>
+          <button
+            class="modal-close-btn"
+            id="dino-game-close-btn"
+            type="button"
+            aria-label="Close dino game modal"
+          >
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            <span>Close</span>
+          </button>
+        </div>
+        <div class="window-content dino-game-content">
+          <div class="dino-game-compact-row">
+            <p class="dino-game-rule">
+              Forest cave mode: catch 7 dinos in 60 seconds. Dino waves pop from
+              15 rock caves.
+            </p>
+            <div class="dino-game-controls">
+              <button
+                class="parade-game-link dino-game-start-btn"
+                id="dino-game-start-btn"
+                type="button"
+              >
+                <i class="fa-solid fa-play" aria-hidden="true"></i>
+                <span>START</span>
+              </button>
+              <button
+                class="dino-game-reset-btn"
+                id="dino-game-reset-btn"
+                type="button"
+              >
+                <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+                <span>RESET</span>
+              </button>
             </div>
-            <div class="window-content dino-game-content">
-                <div class="dino-game-compact-row">
-                    <p class="dino-game-rule">Forest cave mode: catch 7 dinos in 60 seconds. Dino waves pop from 15 rock caves.</p>
-                    <div class="dino-game-controls">
-                        <button class="parade-game-link dino-game-start-btn" id="dino-game-start-btn" type="button">
-                            <i class="fa-solid fa-play" aria-hidden="true"></i>
-                            <span>START</span>
-                        </button>
-                        <button class="dino-game-reset-btn" id="dino-game-reset-btn" type="button">
-                            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
-                            <span>RESET</span>
-                        </button>
-                    </div>
-                </div>
+          </div>
 
-                <div class="dino-game-hud">
-                    <div class="dino-hud-chip">
-                        <span>Caught</span>
-                        <strong id="dino-game-score">0 / 7</strong>
-                    </div>
-                    <div class="dino-hud-chip">
-                        <span>Time Left</span>
-                        <strong id="dino-game-time">60s</strong>
-                    </div>
-                    <div class="dino-hud-chip">
-                        <span>State</span>
-                        <strong id="dino-game-state">READY</strong>
-                    </div>
-                </div>
-
-                <p class="dino-game-status muted-text" id="dino-game-status" aria-live="polite">Press Start. Dinos will pop from caves in waves.</p>
-
-                <div class="dino-game-board-shell">
-                    <div class="dino-game-board" id="dino-game-board" aria-label="Dino catch game board"></div>
-                </div>
+          <div class="dino-game-hud">
+            <div class="dino-hud-chip">
+              <span>Caught</span>
+              <strong id="dino-game-score">0 / 7</strong>
             </div>
-        </article>
+            <div class="dino-hud-chip">
+              <span>Time Left</span>
+              <strong id="dino-game-time">60s</strong>
+            </div>
+            <div class="dino-hud-chip">
+              <span>State</span>
+              <strong id="dino-game-state">READY</strong>
+            </div>
+          </div>
+
+          <p
+            class="dino-game-status muted-text"
+            id="dino-game-status"
+            aria-live="polite"
+          >
+            Press Start. Dinos will pop from caves in waves.
+          </p>
+
+          <div class="dino-game-board-shell">
+            <div
+              class="dino-game-board"
+              id="dino-game-board"
+              aria-label="Dino catch game board"
+            ></div>
+          </div>
+        </div>
+      </article>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        const POSTS_PER_PAGE = 5;
-        const BLOGS_MANIFEST_PATH = 'blogs/index.json';
+      const POSTS_PER_PAGE = 5;
+      const BLOGS_MANIFEST_PATH = "blogs/index.json";
 
-        const listEl = document.getElementById('post-list');
-        const paginationEl = document.getElementById('post-pagination');
-        const titleEl = document.getElementById('post-title');
-        const contentEl = document.getElementById('post-content');
-        const modal = document.getElementById('post-modal');
-        const backdrop = document.getElementById('modal-backdrop');
-        const modalCloseControl = document.getElementById('modal-close-control');
-        const modalCloseBtn = document.getElementById('modal-close-btn');
-        let allPosts = [];
-        let currentPage = 1;
+      const listEl = document.getElementById("post-list");
+      const paginationEl = document.getElementById("post-pagination");
+      const titleEl = document.getElementById("post-title");
+      const contentEl = document.getElementById("post-content");
+      const modal = document.getElementById("post-modal");
+      const backdrop = document.getElementById("modal-backdrop");
+      const modalCloseControl = document.getElementById("modal-close-control");
+      const modalCloseBtn = document.getElementById("modal-close-btn");
+      let allPosts = [];
+      let currentPage = 1;
 
-        function parseFrontMatter(md) {
-            // Support \n / \r\n, optional BOM, optional leading whitespace
-            const clean = md.replace(/^\uFEFF/, '');
-            const match = clean.match(/^[\t ]*---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
-            if (!match) return { meta: {}, body: clean };
-            const meta = {};
-            match[1].split(/\r?\n/).forEach(line => {
-                const [rawKey, ...rest] = line.split(':');
-                if (!rawKey || rest.length === 0) return;
-                const key = rawKey.trim().toLowerCase();
-                meta[key] = rest.join(':').trim();
-            });
-            return { meta, body: clean.slice(match[0].length) };
+      function parseFrontMatter(md) {
+        // Support \n / \r\n, optional BOM, optional leading whitespace
+        const clean = md.replace(/^\uFEFF/, "");
+        const match = clean.match(/^[\t ]*---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
+        if (!match) return { meta: {}, body: clean };
+        const meta = {};
+        match[1].split(/\r?\n/).forEach((line) => {
+          const [rawKey, ...rest] = line.split(":");
+          if (!rawKey || rest.length === 0) return;
+          const key = rawKey.trim().toLowerCase();
+          meta[key] = rest.join(":").trim();
+        });
+        return { meta, body: clean.slice(match[0].length) };
+      }
+
+      function normalizePostFile(href) {
+        const cleanHref = href.split("#")[0].split("?")[0];
+        if (!cleanHref.toLowerCase().endsWith(".md")) return null;
+
+        const withoutLeadingSlash = cleanHref.replace(/^\/+/, "");
+        if (withoutLeadingSlash.startsWith("blogs/")) {
+          return withoutLeadingSlash.slice("blogs/".length);
+        }
+        if (withoutLeadingSlash.includes("/")) return null;
+        return withoutLeadingSlash;
+      }
+
+      function isLocalhost() {
+        return ["localhost", "127.0.0.1", "::1"].includes(
+          window.location.hostname,
+        );
+      }
+
+      async function discoverFromDirectoryListing() {
+        const files = new Set();
+
+        try {
+          const res = await fetch("blogs/", { cache: "no-cache" });
+          if (!res.ok) return [];
+          const html = await res.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          doc.querySelectorAll("a[href]").forEach((link) => {
+            const normalized = normalizePostFile(
+              link.getAttribute("href") || "",
+            );
+            if (normalized) files.add(normalized);
+          });
+        } catch (_) {
+          return [];
         }
 
-        function normalizePostFile(href) {
-            const cleanHref = href.split('#')[0].split('?')[0];
-            if (!cleanHref.toLowerCase().endsWith('.md')) return null;
+        return Array.from(files).sort((a, b) => a.localeCompare(b));
+      }
 
-            const withoutLeadingSlash = cleanHref.replace(/^\/+/, '');
-            if (withoutLeadingSlash.startsWith('blogs/')) {
-                return withoutLeadingSlash.slice('blogs/'.length);
-            }
-            if (withoutLeadingSlash.includes('/')) return null;
-            return withoutLeadingSlash;
+      async function discoverFromManifest() {
+        try {
+          const res = await fetch(BLOGS_MANIFEST_PATH, { cache: "no-cache" });
+          if (!res.ok) return [];
+          const data = await res.json();
+          const list = Array.isArray(data) ? data : data.files;
+          if (!Array.isArray(list)) return [];
+
+          const files = new Set();
+          list.forEach((file) => {
+            if (typeof file !== "string") return;
+            const normalized = normalizePostFile(file);
+            if (normalized) files.add(normalized);
+          });
+          return Array.from(files).sort((a, b) => a.localeCompare(b));
+        } catch (_) {
+          return [];
+        }
+      }
+
+      async function discoverPostFiles() {
+        if (isLocalhost()) {
+          const localFiles = await discoverFromDirectoryListing();
+          if (localFiles.length) return localFiles;
         }
 
-        function isLocalhost() {
-            return ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
-        }
+        const manifestFiles = await discoverFromManifest();
+        if (manifestFiles.length) return manifestFiles;
 
-        async function discoverFromDirectoryListing() {
-            const files = new Set();
+        return discoverFromDirectoryListing();
+      }
+
+      function enhanceCodeBlocks() {
+        contentEl.querySelectorAll("pre").forEach((pre) => {
+          if (pre.querySelector(".code-copy-btn")) return;
+
+          const code = pre.querySelector("code");
+          const toolbar = document.createElement("div");
+          toolbar.className = "code-block-toolbar";
+
+          const label = document.createElement("span");
+          label.className = "code-block-label";
+          label.textContent = "Code Block";
+
+          const copyBtn = document.createElement("button");
+          copyBtn.type = "button";
+          copyBtn.className = "code-copy-btn";
+          copyBtn.setAttribute("aria-label", "Copy code block");
+          copyBtn.innerHTML =
+            '<i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy</span>';
+
+          copyBtn.addEventListener("click", async () => {
+            const text = code ? code.innerText : pre.innerText;
+            if (!text) return;
 
             try {
-                const res = await fetch('blogs/', { cache: 'no-cache' });
-                if (!res.ok) return [];
-                const html = await res.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                doc.querySelectorAll('a[href]').forEach((link) => {
-                    const normalized = normalizePostFile(link.getAttribute('href') || '');
-                    if (normalized) files.add(normalized);
-                });
+              await navigator.clipboard.writeText(text);
+              copyBtn.innerHTML =
+                '<i class="fa-solid fa-check" aria-hidden="true"></i><span>Copied</span>';
+              setTimeout(() => {
+                copyBtn.innerHTML =
+                  '<i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy</span>';
+              }, 1200);
             } catch (_) {
-                return [];
+              copyBtn.innerHTML = "<span>Failed</span>";
+              setTimeout(() => {
+                copyBtn.innerHTML =
+                  '<i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy</span>';
+              }, 1200);
             }
+          });
 
-            return Array.from(files).sort((a, b) => a.localeCompare(b));
-        }
+          toolbar.appendChild(label);
+          toolbar.appendChild(copyBtn);
+          pre.prepend(toolbar);
+        });
+      }
 
-        async function discoverFromManifest() {
-            try {
-                const res = await fetch(BLOGS_MANIFEST_PATH, { cache: 'no-cache' });
-                if (!res.ok) return [];
-                const data = await res.json();
-                const list = Array.isArray(data) ? data : data.files;
-                if (!Array.isArray(list)) return [];
+      function normalizeUrlText(value) {
+        return value.trim().replace(/\/+$/, "");
+      }
 
-                const files = new Set();
-                list.forEach((file) => {
-                    if (typeof file !== 'string') return;
-                    const normalized = normalizePostFile(file);
-                    if (normalized) files.add(normalized);
-                });
-                return Array.from(files).sort((a, b) => a.localeCompare(b));
-            } catch (_) {
-                return [];
+      function isRawUrlLink(link) {
+        const href = link.getAttribute("href");
+        if (!href) return false;
+        const text = (link.textContent || "").trim();
+        if (!text) return false;
+        return normalizeUrlText(text) === normalizeUrlText(href);
+      }
+
+      function enhanceMarkdownLinks() {
+        contentEl.querySelectorAll("a[href]").forEach((link) => {
+          const href = link.getAttribute("href") || "";
+          if (!href) return;
+
+          link.classList.add("markdown-link");
+
+          if (isRawUrlLink(link)) {
+            link.classList.add("markdown-url-link");
+          }
+
+          try {
+            const url = new URL(href, window.location.href);
+            const isExternal =
+              url.origin !== window.location.origin &&
+              /^https?:$/i.test(url.protocol);
+            if (isExternal) {
+              link.classList.add("markdown-link-external");
+              link.setAttribute("target", "_blank");
+              link.setAttribute("rel", "noopener noreferrer");
             }
+          } catch (_) {
+            // Keep relative or custom-protocol links untouched.
+          }
+        });
+      }
+
+      function renderList(posts) {
+        listEl.innerHTML = "";
+
+        if (!posts.length) {
+          listEl.innerHTML = '<p class="muted-text">No blogs found yet.</p>';
+          return;
         }
 
-        async function discoverPostFiles() {
-            if (isLocalhost()) {
-                const localFiles = await discoverFromDirectoryListing();
-                if (localFiles.length) return localFiles;
-            }
+        posts.forEach((post) => {
+          const article = document.createElement("article");
+          article.className = "post-card";
 
-            const manifestFiles = await discoverFromManifest();
-            if (manifestFiles.length) return manifestFiles;
-
-            return discoverFromDirectoryListing();
-        }
-
-        function enhanceCodeBlocks() {
-            contentEl.querySelectorAll('pre').forEach((pre) => {
-                if (pre.querySelector('.code-copy-btn')) return;
-
-                const code = pre.querySelector('code');
-                const toolbar = document.createElement('div');
-                toolbar.className = 'code-block-toolbar';
-
-                const label = document.createElement('span');
-                label.className = 'code-block-label';
-                label.textContent = 'Code Block';
-
-                const copyBtn = document.createElement('button');
-                copyBtn.type = 'button';
-                copyBtn.className = 'code-copy-btn';
-                copyBtn.setAttribute('aria-label', 'Copy code block');
-                copyBtn.innerHTML = '<i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy</span>';
-
-                copyBtn.addEventListener('click', async () => {
-                    const text = code ? code.innerText : pre.innerText;
-                    if (!text) return;
-
-                    try {
-                        await navigator.clipboard.writeText(text);
-                        copyBtn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i><span>Copied</span>';
-                        setTimeout(() => {
-                            copyBtn.innerHTML = '<i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy</span>';
-                        }, 1200);
-                    } catch (_) {
-                        copyBtn.innerHTML = '<span>Failed</span>';
-                        setTimeout(() => {
-                            copyBtn.innerHTML = '<i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy</span>';
-                        }, 1200);
-                    }
-                });
-
-                toolbar.appendChild(label);
-                toolbar.appendChild(copyBtn);
-                pre.prepend(toolbar);
-            });
-        }
-
-        function normalizeUrlText(value) {
-            return value.trim().replace(/\/+$/, '');
-        }
-
-        function isRawUrlLink(link) {
-            const href = link.getAttribute('href');
-            if (!href) return false;
-            const text = (link.textContent || '').trim();
-            if (!text) return false;
-            return normalizeUrlText(text) === normalizeUrlText(href);
-        }
-
-        function enhanceMarkdownLinks() {
-            contentEl.querySelectorAll('a[href]').forEach((link) => {
-                const href = link.getAttribute('href') || '';
-                if (!href) return;
-
-                link.classList.add('markdown-link');
-
-                if (isRawUrlLink(link)) {
-                    link.classList.add('markdown-url-link');
-                }
-
-                try {
-                    const url = new URL(href, window.location.href);
-                    const isExternal = url.origin !== window.location.origin && /^https?:$/i.test(url.protocol);
-                    if (isExternal) {
-                        link.classList.add('markdown-link-external');
-                        link.setAttribute('target', '_blank');
-                        link.setAttribute('rel', 'noopener noreferrer');
-                    }
-                } catch (_) {
-                    // Keep relative or custom-protocol links untouched.
-                }
-            });
-        }
-
-        function renderList(posts) {
-            listEl.innerHTML = '';
-
-            if (!posts.length) {
-                listEl.innerHTML = '<p class="muted-text">No blogs found yet.</p>';
-                return;
-            }
-
-            posts.forEach((post) => {
-                const article = document.createElement('article');
-                article.className = 'post-card';
-
-                const row = document.createElement('button');
-                row.type = 'button';
-                row.className = 'post-row';
-                row.setAttribute('data-slug', post.slug);
-                row.setAttribute('aria-label', `Read blog post ${post.title || post.slug}`);
-                row.innerHTML = `
+          const row = document.createElement("button");
+          row.type = "button";
+          row.className = "post-row";
+          row.setAttribute("data-slug", post.slug);
+          row.setAttribute(
+            "aria-label",
+            `Read blog post ${post.title || post.slug}`,
+          );
+          row.innerHTML = `
                     <span class="row-view-icon" aria-hidden="true">
                         <i class="fa-regular fa-eye"></i>
                     </span>
                     <h3 class=\"sr-only\">${post.title || post.slug}</h3>
                     <div class=\"row-title\">${post.title || post.slug}</div>
                     <div class=\"row-meta\">
-                        <span>${post.date || 'Unknown date'}</span>
-                        ${post.tags ? post.tags.split(',').map(t => `<span class=\"pill\">${t.trim()}</span>`).join('') : ''}
+                        <span>${post.date || "Unknown date"}</span>
+                        ${
+                          post.tags
+                            ? post.tags
+                                .split(",")
+                                .map(
+                                  (t) =>
+                                    `<span class=\"pill\">${t.trim()}</span>`,
+                                )
+                                .join("")
+                            : ""
+                        }
                     </div>
-                    <p class=\"muted-text\">${post.summary || 'No summary provided.'}</p>
+                    <p class=\"muted-text\">${post.summary || "No summary provided."}</p>
                 `;
-                row.addEventListener('click', () => loadPost(post));
-                article.appendChild(row);
-                listEl.appendChild(article);
-            });
-        }
-
-        function renderPagination(posts) {
-            paginationEl.innerHTML = '';
-
-            const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
-            if (totalPages <= 1) {
-                paginationEl.hidden = true;
-                return;
-            }
-
-            paginationEl.hidden = false;
-
-            const prevBtn = document.createElement('button');
-            prevBtn.type = 'button';
-            prevBtn.className = 'page-btn';
-            prevBtn.textContent = 'Prev';
-            prevBtn.disabled = currentPage === 1;
-            prevBtn.addEventListener('click', () => setPage(currentPage - 1));
-            paginationEl.appendChild(prevBtn);
-
-            for (let page = 1; page <= totalPages; page += 1) {
-                const pageBtn = document.createElement('button');
-                pageBtn.type = 'button';
-                pageBtn.className = `page-btn${page === currentPage ? ' active' : ''}`;
-                pageBtn.textContent = String(page);
-                pageBtn.setAttribute('aria-label', `Go to page ${page}`);
-                if (page === currentPage) {
-                    pageBtn.setAttribute('aria-current', 'page');
-                }
-                pageBtn.addEventListener('click', () => setPage(page));
-                paginationEl.appendChild(pageBtn);
-            }
-
-            const nextBtn = document.createElement('button');
-            nextBtn.type = 'button';
-            nextBtn.className = 'page-btn';
-            nextBtn.textContent = 'Next';
-            nextBtn.disabled = currentPage === totalPages;
-            nextBtn.addEventListener('click', () => setPage(currentPage + 1));
-            paginationEl.appendChild(nextBtn);
-        }
-
-        function renderPage() {
-            const start = (currentPage - 1) * POSTS_PER_PAGE;
-            const pagedPosts = allPosts.slice(start, start + POSTS_PER_PAGE);
-            renderList(pagedPosts);
-            renderPagination(allPosts);
-        }
-
-        function setPage(page) {
-            const totalPages = Math.max(1, Math.ceil(allPosts.length / POSTS_PER_PAGE));
-            currentPage = Math.min(Math.max(page, 1), totalPages);
-            renderPage();
-        }
-
-        async function loadPost(post) {
-            modal.setAttribute('aria-hidden', 'false');
-            modal.classList.add('open');
-            document.body.classList.add('modal-open');
-            titleEl.textContent = 'LOADING…';
-            contentEl.innerHTML = '<p class=\"muted-text\">Fetching markdown...</p>';
-
-            try {
-                const res = await fetch(`blogs/${post.slug}`, { cache: 'no-cache' });
-                if (!res.ok) throw new Error('Post not found');
-                const md = await res.text();
-                const { body } = parseFrontMatter(md);
-                const html = window.marked ? window.marked.parse(body) : body;
-                titleEl.textContent = post.title || post.slug;
-                contentEl.innerHTML = html;
-                enhanceMarkdownLinks();
-                enhanceCodeBlocks();
-            } catch (err) {
-                titleEl.textContent = 'ERROR';
-                contentEl.innerHTML = `<p class=\"muted-text\">${err.message}. Check that the markdown file exists.</p>`;
-            }
-        }
-
-        async function bootstrap() {
-            const postFiles = await discoverPostFiles();
-            const posts = [];
-            for (const file of postFiles) {
-                try {
-                    const res = await fetch(`blogs/${file}`, { cache: 'no-cache' });
-                    if (!res.ok) continue;
-                    const md = await res.text();
-                    const { meta } = parseFrontMatter(md);
-                    posts.push({ slug: file, ...meta });
-                } catch (_) {
-                    // skip broken files silently
-                }
-            }
-            posts.sort((a, b) => {
-                const timeA = Date.parse(a.date || '');
-                const timeB = Date.parse(b.date || '');
-                const validA = Number.isFinite(timeA);
-                const validB = Number.isFinite(timeB);
-
-                if (validA && validB) return timeB - timeA;
-                if (validA) return -1;
-                if (validB) return 1;
-                return (a.title || a.slug).localeCompare(b.title || b.slug);
-            });
-            allPosts = posts;
-            currentPage = 1;
-            renderPage();
-        }
-
-        function closeModal() {
-            modal.setAttribute('aria-hidden', 'true');
-            modal.classList.remove('open');
-            document.body.classList.remove('modal-open');
-        }
-
-        backdrop.addEventListener('click', closeModal);
-        modalCloseControl.addEventListener('click', closeModal);
-        modalCloseControl.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                closeModal();
-            }
+          row.addEventListener("click", () => loadPost(post));
+          article.appendChild(row);
+          listEl.appendChild(article);
         });
-        modalCloseBtn.addEventListener('click', closeModal);
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
+      }
 
-        bootstrap();
+      function renderPagination(posts) {
+        paginationEl.innerHTML = "";
+
+        const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+        if (totalPages <= 1) {
+          paginationEl.hidden = true;
+          return;
+        }
+
+        paginationEl.hidden = false;
+
+        const prevBtn = document.createElement("button");
+        prevBtn.type = "button";
+        prevBtn.className = "page-btn";
+        prevBtn.textContent = "Prev";
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.addEventListener("click", () => setPage(currentPage - 1));
+        paginationEl.appendChild(prevBtn);
+
+        for (let page = 1; page <= totalPages; page += 1) {
+          const pageBtn = document.createElement("button");
+          pageBtn.type = "button";
+          pageBtn.className = `page-btn${page === currentPage ? " active" : ""}`;
+          pageBtn.textContent = String(page);
+          pageBtn.setAttribute("aria-label", `Go to page ${page}`);
+          if (page === currentPage) {
+            pageBtn.setAttribute("aria-current", "page");
+          }
+          pageBtn.addEventListener("click", () => setPage(page));
+          paginationEl.appendChild(pageBtn);
+        }
+
+        const nextBtn = document.createElement("button");
+        nextBtn.type = "button";
+        nextBtn.className = "page-btn";
+        nextBtn.textContent = "Next";
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.addEventListener("click", () => setPage(currentPage + 1));
+        paginationEl.appendChild(nextBtn);
+      }
+
+      function renderPage() {
+        const start = (currentPage - 1) * POSTS_PER_PAGE;
+        const pagedPosts = allPosts.slice(start, start + POSTS_PER_PAGE);
+        renderList(pagedPosts);
+        renderPagination(allPosts);
+      }
+
+      function setPage(page) {
+        const totalPages = Math.max(
+          1,
+          Math.ceil(allPosts.length / POSTS_PER_PAGE),
+        );
+        currentPage = Math.min(Math.max(page, 1), totalPages);
+        renderPage();
+      }
+
+      async function loadPost(post) {
+        modal.setAttribute("aria-hidden", "false");
+        modal.classList.add("open");
+        document.body.classList.add("modal-open");
+        titleEl.textContent = "LOADING…";
+        contentEl.innerHTML =
+          '<p class=\"muted-text\">Fetching markdown...</p>';
+
+        try {
+          const res = await fetch(`blogs/${post.slug}`, { cache: "no-cache" });
+          if (!res.ok) throw new Error("Post not found");
+          const md = await res.text();
+          const { body } = parseFrontMatter(md);
+          const html = window.marked ? window.marked.parse(body) : body;
+          titleEl.textContent = post.title || post.slug;
+          contentEl.innerHTML = html;
+          enhanceMarkdownLinks();
+          enhanceCodeBlocks();
+        } catch (err) {
+          titleEl.textContent = "ERROR";
+          contentEl.innerHTML = `<p class=\"muted-text\">${err.message}. Check that the markdown file exists.</p>`;
+        }
+      }
+
+      async function bootstrap() {
+        const postFiles = await discoverPostFiles();
+        const posts = [];
+        for (const file of postFiles) {
+          try {
+            const res = await fetch(`blogs/${file}`, { cache: "no-cache" });
+            if (!res.ok) continue;
+            const md = await res.text();
+            const { meta } = parseFrontMatter(md);
+            posts.push({ slug: file, ...meta });
+          } catch (_) {
+            // skip broken files silently
+          }
+        }
+        posts.sort((a, b) => {
+          const timeA = Date.parse(a.date || "");
+          const timeB = Date.parse(b.date || "");
+          const validA = Number.isFinite(timeA);
+          const validB = Number.isFinite(timeB);
+
+          if (validA && validB) return timeB - timeA;
+          if (validA) return -1;
+          if (validB) return 1;
+          return (a.title || a.slug).localeCompare(b.title || b.slug);
+        });
+        allPosts = posts;
+        currentPage = 1;
+        renderPage();
+      }
+
+      function closeModal() {
+        modal.setAttribute("aria-hidden", "true");
+        modal.classList.remove("open");
+        document.body.classList.remove("modal-open");
+      }
+
+      backdrop.addEventListener("click", closeModal);
+      modalCloseControl.addEventListener("click", closeModal);
+      modalCloseControl.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          closeModal();
+        }
+      });
+      modalCloseBtn.addEventListener("click", closeModal);
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+
+      bootstrap();
     </script>
     <script src="nav.js" defer></script>
     <script src="parade.js" defer></script>
     <script src="dino-game.js" defer></script>
-</body>
-
+  </body>
 </html>
