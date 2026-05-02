@@ -2033,6 +2033,24 @@ a {
   box-shadow: 4px 4px 0 var(--border-color);
 }
 
+.project-links a.github-project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(180deg, #222 0%, #050505 100%);
+  color: #fffaf1;
+  border-color: #050505;
+}
+
+.project-links a.github-project-link:hover {
+  background: linear-gradient(180deg, #111 0%, #000 100%);
+}
+
+.github-project-link i {
+  font-size: 1.05em;
+}
+
 .projects-cta {
   justify-content: center;
   align-items: center;
